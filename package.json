@@ -1,0 +1,41 @@
+{
+  "name": "setup",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx,cjs}\"",
+    "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx,cjs}\"",
+    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,cjs}\"",
+    "format": "npm run prettier && npm run lint:fix"
+  },
+  "dependencies": {
+    "@nabla/vite-plugin-eslint": "^2.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "path": "^0.12.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "vite-jsconfig-paths": "^2.0.1",
+    "vite-plugin-inspect": "^0.8.4",
+    "vite-plugin-pwa": "^0.20.0",
+    "vite-plugin-time-reporter": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "prettier": "^3.3.2",
+    "vite": "^5.3.1"
+  }
+}

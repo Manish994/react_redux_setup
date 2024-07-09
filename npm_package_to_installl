@@ -1,0 +1,23 @@
+VS Code Extensions
+# Extensions
+code --install-extension esbenp.prettier-vscode # Prettier - Code formatter
+code --install-extension dbaeumer.vscode-eslint # ESLint
+code --install-extension coenraads.bracket-pair-colorizer-2 # Bracket Pair Colorizer
+code --install-extension eamodio.gitlens # GitLens
+code --install-extension vscode-icons-team.vscode-icons # vscode-icons
+code --install-extension christian-kohler.path-intellisense # Path Intellisense
+code --install-extension ritwickdey.live-server # Live Server
+code --install-extension yzhang.markdown-all-in-one # Markdown All in One
+
+
+1. npm create vite@latest
+
+npm Packages for vite.config.js
+# Packages for vite.config.js
+npm install vite-jsconfig-paths path @nabla/vite-plugin-eslint rollup-plugin-visualizer vite-plugin-time-reporter vite-plugin-inspect vite-plugin-pwa
+
+
+npm Packages for ESLint (eslintrc.cjs)
+# Packages for eslintrc.cjs
+npm install eslint eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-config-prettier eslint-plugin-import prettier --save-dev
+
