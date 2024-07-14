@@ -24,5 +24,8 @@ npm install eslint eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-j
 # Packages for Localtunnel
 npm install -g localtunnel
 
+# Website Name for favicon generator
+https://favicon.inbrowser.app/tools/favicon-generator
+
 
 
