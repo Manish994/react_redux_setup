@@ -3,6 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": {
+    "name": "setup",
+    "email": "setup@gmail.com",
+    "url": "https://setup.com/"
+  },
+  "homepage": "https://setup.com/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,7 +16,8 @@
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx,cjs}\"",
     "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx,cjs}\"",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,cjs}\"",
-    "format": "npm run prettier && npm run lint:fix"
+    "format": "npm run prettier && npm run lint:fix",
+    "tunnel": "lt --port 3000 --subdomain localTunnel"
   },
   "dependencies": {
     "@nabla/vite-plugin-eslint": "^2.0.4",

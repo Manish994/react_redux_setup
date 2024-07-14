@@ -21,3 +21,8 @@ npm Packages for ESLint (eslintrc.cjs)
 # Packages for eslintrc.cjs
 npm install eslint eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-config-prettier eslint-plugin-import prettier --save-dev
 
+# Packages for Localtunnel
+npm install -g localtunnel
+
+
+
