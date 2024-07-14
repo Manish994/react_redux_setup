@@ -1,0 +1,70 @@
+{
+  // Workbench settings
+  "workbench.editor.enablePreview": false,
+  "workbench.colorTheme": "One Dark",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": false,
+  "workbench.sideBar.location": "right",
+
+  // Editor settings
+  "editor.mouseWheelZoom": true,
+  "editor.tabSize": 2,
+  "editor.lineNumbers": "on",
+  "editor.renderWhitespace": "none",
+  "editor.folding": true,
+  "editor.fontSize": 16.5,
+  "editor.fontWeight": "400",
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Iosevka Custom",
+  "editor.cursorBlinking": "expand",
+  "editor.wordWrap": "on",
+  "editor.scrollBeyondLastLine": false,
+  "editor.scrollPredominantAxis": false,
+  "editor.formatOnSave": true, // Enable auto-formatting on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // Explorer settings
+  "explorer.compactFolders": false,
+  "explorer.autoReveal": false,
+  "explorer.sortOrder": "type",
+
+  // Terminal settings
+  "terminal.integrated.fontSize": 16.5,
+  "terminal.integrated.fontWeight": "300",
+  "terminal.integrated.fontWeightBold": "300",
+  "terminal.integrated.fontFamily": "Iosevka Custom Extended",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+  // Files settings
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "onFocusChange",
+
+  // Git settings
+  "git.autofetch": true,
+
+  // VS Code icons extension settings
+  "vsicons.dontShowNewVersionMessage": true,
+
+  // Security settings
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // Prettier settings
+  "prettier.bracketSpacing": true,
+  "prettier.printWidth": 140,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.tabWidth": 3,
+  "prettier.useTabs": false,
+
+  // ESLint and Prettier integration settings
+  "eslint.format.enable": true,
+
+  // Accessibility and whitespace settings
+  "editor.accessibilitySupport": "off",
+  "diffEditor.ignoreTrimWhitespace": false
+}
+
+
