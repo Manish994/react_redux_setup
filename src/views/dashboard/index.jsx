@@ -4,16 +4,16 @@ import { useSelector } from 'react-redux';
 import Grid from '@mui/material/Grid';
 
 // Redux-related imports
-import { selectGridSpacing } from '@slice/customizationSlice';
+import { selectCustomization } from '@slice/customizationSlice';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 
 const Dashboard = () => {
-   const gridSpacing = useSelector(selectGridSpacing);
+   const customization = useSelector(selectCustomization);
    return (
-      <Grid container spacing={gridSpacing}>
+      <Grid container spacing={customization.gridSpacing}>
          <Grid item xs={12}>
-            <Grid container spacing={gridSpacing}>
+            <Grid container spacing={customization.gridSpacing}>
                <Grid item lg={4} md={6} sm={6} xs={12}>
                   <p>Hello</p>
                </Grid>
@@ -21,7 +21,7 @@ const Dashboard = () => {
                   <p>Hello</p>
                </Grid>
                <Grid item lg={4} md={12} sm={12} xs={12}>
-                  <Grid container spacing={gridSpacing}>
+                  <Grid container spacing={customization.gridSpacing}>
                      <Grid item sm={6} xs={12} md={6} lg={12}>
                         <p>Hello</p>
                      </Grid>
@@ -33,7 +33,7 @@ const Dashboard = () => {
             </Grid>
          </Grid>
          <Grid item xs={12}>
-            <Grid container spacing={gridSpacing}>
+            <Grid container spacing={customization.gridSpacing}>
                <Grid item xs={12} md={8}>
                   <p>Hello</p>
                </Grid>

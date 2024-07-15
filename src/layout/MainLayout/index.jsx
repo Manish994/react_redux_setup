@@ -15,12 +15,12 @@ import Customization from '../Customization';
 import Breadcrumbs from 'ui-component/extended/Breadcrumbs';
 
 // Redux-related imports
-import { selectDrawerWidth, setMenu } from '@slice/customizationSlice';
+import { selectDrawerWidth, selectCustomization, setMenu } from '@slice/customizationSlice';
 
 // assets
 import { IconChevronRight } from '@tabler/icons-react';
 
-const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' && prop !== 'theme' })(({ theme, open }) => ({
+const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' && prop !== 'theme' })(({ theme, open, drawerWidth }) => ({
    ...theme.typography.mainContent,
    borderBottomLeftRadius: 0,
    borderBottomRightRadius: 0,
@@ -37,17 +37,17 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' && pr
            }
    ),
    [theme.breakpoints.up('md')]: {
-      marginLeft: open ? 0 : -(selectDrawerWidth - 20),
+      marginLeft: open ? 0 : -(drawerWidth - 20),
       width: `calc(100% - ${selectDrawerWidth}px)`
    },
    [theme.breakpoints.down('md')]: {
       marginLeft: '20px',
-      width: `calc(100% - ${selectDrawerWidth}px)`,
+      width: `calc(100% - ${drawerWidth}px)`,
       padding: '16px'
    },
    [theme.breakpoints.down('sm')]: {
       marginLeft: '10px',
-      width: `calc(100% - ${selectDrawerWidth}px)`,
+      width: `calc(100% - ${drawerWidth}px)`,
       padding: '16px',
       marginRight: '10px'
    }
@@ -58,8 +58,10 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' && pr
 const MainLayout = () => {
    const theme = useTheme();
    const matchDownMd = useMediaQuery(theme.breakpoints.down('md'));
+   const customization = useSelector(selectCustomization);
    // Handle left drawer
-   const leftDrawerOpened = useSelector((state) => state.customization.opened);
+   const leftDrawerOpened = customization.opened;
+   const drawerWidth = customization.drawerWidth;
    const dispatch = useDispatch();
    const handleLeftDrawerToggle = () => {
       dispatch(setMenu({ opened: !leftDrawerOpened }));
@@ -88,7 +90,7 @@ const MainLayout = () => {
          <Sidebar drawerOpen={!matchDownMd ? leftDrawerOpened : !leftDrawerOpened} drawerToggle={handleLeftDrawerToggle} />
 
          {/* main content */}
-         <Main theme={theme} open={leftDrawerOpened}>
+         <Main theme={theme} open={leftDrawerOpened} drawerWidth={drawerWidth}>
             {/* breadcrumb */}
             <Breadcrumbs separator={IconChevronRight} navigation={navigation} icon title rightAlign />
             <Outlet />

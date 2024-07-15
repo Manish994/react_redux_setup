@@ -38,8 +38,6 @@ export default customizationSlice.reducer;
 
 export const selectCustomization = (state) => state.customization;
 
-export const selectGridSpacing = (state) => state.customization.gridSpacing;
-
 export const selectDrawerWidth = (state) => state.customization.drawerWidth;
 
 export const selectAppDrawerWidth = (state) => state.customization.appDrawerWidth;

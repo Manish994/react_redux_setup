@@ -23,7 +23,7 @@ import SubCard from 'ui-component/cards/SubCard';
 import AnimateButton from 'ui-component/extended/AnimateButton';
 
 // Redux-related imports
-import { setFontFamily, setBorderRadius, selectCustomization, selectGridSpacing } from '@slice/customizationSlice';
+import { setFontFamily, setBorderRadius, selectCustomization } from '@slice/customizationSlice';
 
 // assets
 import { IconSettings } from '@tabler/icons-react';
@@ -130,7 +130,7 @@ const Customization = () => {
             }}
          >
             <PerfectScrollbar component="div">
-               <Grid container spacing={selectGridSpacing} sx={{ p: 3 }}>
+               <Grid container spacing={customization.gridSpacing} sx={{ p: 3 }}>
                   <Grid item xs={12}>
                      {/* font family */}
                      <SubCard title="Font Family">
