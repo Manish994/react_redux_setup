@@ -6,7 +6,11 @@ const initialState = {
    defaultId: 'default',
    fontFamily: config.fontFamily,
    borderRadius: config.borderRadius,
-   opened: true
+   opened: true,
+   // theme constant
+   gridSpacing: 3,
+   drawerWidth: 3,
+   appDrawerWidth: 3
 };
 
 const customizationSlice = createSlice({
@@ -31,3 +35,11 @@ const customizationSlice = createSlice({
 export const { menuOpen, setMenu, setFontFamily, setBorderRadius } = customizationSlice.actions;
 
 export default customizationSlice.reducer;
+
+export const selectCustomization = (state) => state.customization;
+
+export const selectGridSpacing = (state) => state.gridSpacing;
+
+export const selectDrawerWidth = (state) => state.drawerWidth;
+
+export const selectAppDrawerWidth = (state) => state.appDrawerWidth;
