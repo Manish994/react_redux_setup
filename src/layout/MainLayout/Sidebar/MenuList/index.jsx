@@ -21,7 +21,7 @@ const MenuList = () => {
       }
    });
 
-   return <Typography>{navItems}</Typography>;
+   return <>{navItems}</>;
 };
 
 export default MenuList;
