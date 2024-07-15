@@ -47,14 +47,14 @@ const Customization = () => {
    };
 
    // state - border radius
-   const [newBorderRadius, setNewBorderRadius] = useState(customization.borderRadius);
+   const [borderRadius, setNewBorderRadius] = useState(customization.borderRadius);
    const handleBorderRadius = (event, newValue) => {
       setNewBorderRadius(newValue);
    };
 
    useEffect(() => {
       dispatch(setBorderRadius({ borderRadius: borderRadius }));
-   }, [dispatch, newBorderRadius]);
+   }, [dispatch, borderRadius]);
 
    let initialFont;
    switch (customization.fontFamily) {
@@ -184,7 +184,7 @@ const Customization = () => {
                            <Grid item xs>
                               <Slider
                                  size="small"
-                                 value={newBorderRadius}
+                                 value={borderRadius}
                                  onChange={handleBorderRadius}
                                  getAriaValueText={valueText}
                                  valueLabelDisplay="on"

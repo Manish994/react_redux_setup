@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 
 // material-ui
 import { useTheme } from '@mui/material';
@@ -25,6 +26,8 @@ import { selectDrawerWidth } from '@slice/customizationSlice';
 const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
    const theme = useTheme();
    const matchUpMd = useMediaQuery(theme.breakpoints.up('md'));
+
+   const drawerWidth = useSelector(selectDrawerWidth);
 
    const drawer = (
       <>
@@ -64,7 +67,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
    const container = window !== undefined ? () => window.document.body : undefined;
 
    return (
-      <Box component="nav" sx={{ flexShrink: { md: 0 }, width: matchUpMd ? selectDrawerWidth : 'auto' }} aria-label="mailbox folders">
+      <Box component="nav" sx={{ flexShrink: { md: 0 }, width: matchUpMd ? drawerWidth : 'auto' }} aria-label="mailbox folders">
          <Drawer
             container={container}
             variant={matchUpMd ? 'persistent' : 'temporary'}
@@ -73,7 +76,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
             onClose={drawerToggle}
             sx={{
                '& .MuiDrawer-paper': {
-                  width: selectDrawerWidth,
+                  width: drawerWidth,
                   background: theme.palette.background.default,
                   color: theme.palette.text.primary,
                   borderRight: 'none',

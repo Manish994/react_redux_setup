@@ -9,8 +9,8 @@ const initialState = {
    opened: true,
    // theme constant
    gridSpacing: 3,
-   drawerWidth: 3,
-   appDrawerWidth: 3
+   drawerWidth: 260,
+   appDrawerWidth: 320
 };
 
 const customizationSlice = createSlice({
@@ -38,8 +38,8 @@ export default customizationSlice.reducer;
 
 export const selectCustomization = (state) => state.customization;
 
-export const selectGridSpacing = (state) => state.gridSpacing;
+export const selectGridSpacing = (state) => state.customization.gridSpacing;
 
-export const selectDrawerWidth = (state) => state.drawerWidth;
+export const selectDrawerWidth = (state) => state.customization.drawerWidth;
 
-export const selectAppDrawerWidth = (state) => state.appDrawerWidth;
+export const selectAppDrawerWidth = (state) => state.customization.appDrawerWidth;

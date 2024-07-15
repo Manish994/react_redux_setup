@@ -14,10 +14,16 @@ import { selectCustomization, menuOpen } from '@slice/customizationSlice';
 // ==============================|| MAIN LOGO ||============================== //
 
 const LogoSection = () => {
-   const defaultId = useSelector(selectCustomization.defaultId);
+   const customization = useSelector(selectCustomization);
+
    const dispatch = useDispatch();
    return (
-      <ButtonBase disableRipple onClick={() => dispatch(menuOpen({ id: defaultId }))} component={Link} to={config.defaultPath}>
+      <ButtonBase
+         disableRipple
+         onClick={() => dispatch(menuOpen({ id: customization.defaultId }))}
+         component={Link}
+         to={config.defaultPath}
+      >
          <Logo />
       </ButtonBase>
    );
