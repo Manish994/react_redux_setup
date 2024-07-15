@@ -37,7 +37,3 @@ export const { menuOpen, setMenu, setFontFamily, setBorderRadius } = customizati
 export default customizationSlice.reducer;
 
 export const selectCustomization = (state) => state.customization;
-
-export const selectDrawerWidth = (state) => state.customization.drawerWidth;
-
-export const selectAppDrawerWidth = (state) => state.customization.appDrawerWidth;

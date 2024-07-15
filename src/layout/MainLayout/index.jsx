@@ -15,7 +15,7 @@ import Customization from '../Customization';
 import Breadcrumbs from 'ui-component/extended/Breadcrumbs';
 
 // Redux-related imports
-import { selectDrawerWidth, selectCustomization, setMenu } from '@slice/customizationSlice';
+import { selectCustomization, setMenu } from '@slice/customizationSlice';
 
 // assets
 import { IconChevronRight } from '@tabler/icons-react';
@@ -38,7 +38,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' && pr
    ),
    [theme.breakpoints.up('md')]: {
       marginLeft: open ? 0 : -(drawerWidth - 20),
-      width: `calc(100% - ${selectDrawerWidth}px)`
+      width: `calc(100% - ${drawerWidth}px)`
    },
    [theme.breakpoints.down('md')]: {
       marginLeft: '20px',

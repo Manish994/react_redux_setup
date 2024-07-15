@@ -19,7 +19,7 @@ import LogoSection from '../LogoSection';
 import Chip from 'ui-component/extended/Chip';
 
 // Redux-related imports
-import { selectDrawerWidth } from '@slice/customizationSlice';
+import { selectCustomization } from '@slice/customizationSlice';
 
 // ==============================|| SIDEBAR DRAWER ||============================== //
 
@@ -27,7 +27,8 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
    const theme = useTheme();
    const matchUpMd = useMediaQuery(theme.breakpoints.up('md'));
 
-   const drawerWidth = useSelector(selectDrawerWidth);
+   const customization = useSelector(selectCustomization);
+   const drawerWidth = customization.drawerWidth;
 
    const drawer = (
       <>
