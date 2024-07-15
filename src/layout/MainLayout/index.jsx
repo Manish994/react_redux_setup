@@ -20,7 +20,7 @@ import { selectCustomization, setMenu } from '@slice/customizationSlice';
 // assets
 import { IconChevronRight } from '@tabler/icons-react';
 
-const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' && prop !== 'theme' })(({ theme, open, drawerWidth }) => ({
+const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' && prop !== 'theme' })(({ theme, open, drawerwidth }) => ({
    ...theme.typography.mainContent,
    borderBottomLeftRadius: 0,
    borderBottomRightRadius: 0,
@@ -37,17 +37,17 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' && pr
            }
    ),
    [theme.breakpoints.up('md')]: {
-      marginLeft: open ? 0 : -(drawerWidth - 20),
-      width: `calc(100% - ${drawerWidth}px)`
+      marginLeft: open ? 0 : -(drawerwidth - 20),
+      width: `calc(100% - ${drawerwidth}px)`
    },
    [theme.breakpoints.down('md')]: {
       marginLeft: '20px',
-      width: `calc(100% - ${drawerWidth}px)`,
+      width: `calc(100% - ${drawerwidth}px)`,
       padding: '16px'
    },
    [theme.breakpoints.down('sm')]: {
       marginLeft: '10px',
-      width: `calc(100% - ${drawerWidth}px)`,
+      width: `calc(100% - ${drawerwidth}px)`,
       padding: '16px',
       marginRight: '10px'
    }
@@ -90,7 +90,7 @@ const MainLayout = () => {
          <Sidebar drawerOpen={!matchDownMd ? leftDrawerOpened : !leftDrawerOpened} drawerToggle={handleLeftDrawerToggle} />
 
          {/* main content */}
-         <Main theme={theme} open={leftDrawerOpened} drawerWidth={drawerWidth}>
+         <Main theme={theme} open={leftDrawerOpened} drawerwidth={drawerWidth}>
             {/* breadcrumb */}
             <Breadcrumbs separator={IconChevronRight} navigation={navigation} icon title rightAlign />
             <Outlet />
