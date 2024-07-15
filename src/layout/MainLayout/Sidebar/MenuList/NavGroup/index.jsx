@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 // material-ui
-import { useTheme } from '@mui/material/styles';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 
@@ -12,8 +11,6 @@ import NavCollapse from '../NavCollapse';
 // ==============================|| SIDEBAR MENU LIST GROUP ||============================== //
 
 const NavGroup = ({ item }) => {
-   const theme = useTheme();
-
    // menu list collapse & items
    const items = item.children?.map((menu) => {
       switch (menu.type) {
@@ -30,13 +27,7 @@ const NavGroup = ({ item }) => {
       }
    });
 
-   return (
-      <List
-         subheader={item.title && <Typography variant="caption" sx={{ ...theme.typography.menuCaption }} display="block" gutterBottom />}
-      >
-         {items}
-      </List>
-   );
+   return <List subheader={item.title && <Typography variant="caption" display="block" gutterBottom />}>{items}</List>;
 };
 
 NavGroup.propTypes = {

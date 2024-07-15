@@ -23,6 +23,9 @@ import { selectCustomization } from '@slice/customizationSlice';
 // ==============================|| SIDEBAR DRAWER ||============================== //
 
 const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
+   /* ╔════════════════════════════════════════════════════════╗
+      ║                      FORM SETUP                        ║
+      ╚════════════════════════════════════════════════════════╝ */
    const theme = useTheme();
    const matchUpMd = useMediaQuery(theme.breakpoints.up('md'));
 
