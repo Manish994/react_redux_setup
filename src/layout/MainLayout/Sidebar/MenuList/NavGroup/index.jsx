@@ -27,7 +27,7 @@ const NavGroup = ({ item }) => {
       }
    });
 
-   return <List subheader={item.title && <Typography variant="caption" display="block" gutterBottom />}>{items}</List>;
+   return <List>{items}</List>;
 };
 
 NavGroup.propTypes = {

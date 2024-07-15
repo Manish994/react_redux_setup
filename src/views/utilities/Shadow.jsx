@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
 // material-ui
@@ -9,8 +10,6 @@ import Grid from '@mui/material/Grid';
 import SubCard from 'ui-component/cards/SubCard';
 import MainCard from 'ui-component/cards/MainCard';
 import SecondaryAction from 'ui-component/cards/CardSecondaryAction';
-
-import { gridSpacing } from 'store/constant';
 
 // ===============================|| SHADOW BOX ||=============================== //
 
@@ -66,12 +65,13 @@ CustomShadowBox.propTypes = {
 // ============================|| UTILITIES SHADOW ||============================ //
 
 const UtilitiesShadow = () => {
+   const customization = useSelector((state) => state.customization);
    return (
       <MainCard title="Basic Shadow" secondary={<SecondaryAction link="https://next.material-ui.com/system/shadows/" />}>
-         <Grid container spacing={gridSpacing}>
+         <Grid container spacing={customization.gridSpacing}>
             <Grid item xs={12}>
                <SubCard title="Basic Shadow">
-                  <Grid container spacing={gridSpacing}>
+                  <Grid container spacing={customization.gridSpacing}>
                      <Grid item xs={12} sm={6} md={4} lg={3}>
                         <ShadowBox shadow="0" />
                      </Grid>

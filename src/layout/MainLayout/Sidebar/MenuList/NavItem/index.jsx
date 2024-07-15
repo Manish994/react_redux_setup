@@ -5,8 +5,6 @@ import { Link, useLocation } from 'react-router-dom';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
-import Avatar from '@mui/material/Avatar';
-import Chip from '@mui/material/Chip';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
@@ -19,13 +17,16 @@ import { menuOpen, setMenu } from '@slice/customizationSlice';
 // assets
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
+// Redux-related imports
+import { selectCustomization } from '@slice/customizationSlice';
+
 // ==============================|| SIDEBAR MENU LIST ITEMS ||============================== //
 
 const NavItem = ({ item, level }) => {
    const theme = useTheme();
    const dispatch = useDispatch();
    const { pathname } = useLocation();
-   const customization = useSelector((state) => state.customization);
+   const customization = useSelector(selectCustomization);
    const matchesSM = useMediaQuery(theme.breakpoints.down('lg'));
 
    const Icon = item.icon;
@@ -93,15 +94,6 @@ const NavItem = ({ item, level }) => {
                </Typography>
             }
          />
-         {item.chip && (
-            <Chip
-               color={item.chip.color}
-               variant={item.chip.variant}
-               size={item.chip.size}
-               label={item.chip.label}
-               avatar={item.chip.avatar && <Avatar>{item.chip.avatar}</Avatar>}
-            />
-         )}
       </ListItemButton>
    );
 };

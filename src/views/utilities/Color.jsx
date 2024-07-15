@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
 // material-ui
@@ -11,7 +12,6 @@ import Typography from '@mui/material/Typography';
 import SubCard from 'ui-component/cards/SubCard';
 import MainCard from 'ui-component/cards/MainCard';
 import SecondaryAction from 'ui-component/cards/CardSecondaryAction';
-import { gridSpacing } from 'store/constant';
 
 // ===============================|| COLOR BOX ||=============================== //
 
@@ -62,13 +62,13 @@ ColorBox.propTypes = {
 
 const UIColor = () => {
    const theme = useTheme();
-
+   const customization = useSelector((state) => state.customization);
    return (
       <MainCard title="Color Palette" secondary={<SecondaryAction link="https://next.material-ui.com/system/palette/" />}>
-         <Grid container spacing={gridSpacing}>
+         <Grid container spacing={customization.gridSpacing}>
             <Grid item xs={12}>
                <SubCard title="Primary Color">
-                  <Grid container spacing={gridSpacing}>
+                  <Grid container spacing={customization.gridSpacing}>
                      <Grid item xs={12} sm={6} md={4} lg={2}>
                         <ColorBox
                            bgcolor="primary.light"
@@ -111,7 +111,7 @@ const UIColor = () => {
             </Grid>
             <Grid item xs={12}>
                <SubCard title="Secondary Color">
-                  <Grid container spacing={gridSpacing}>
+                  <Grid container spacing={customization.gridSpacing}>
                      <Grid item xs={12} sm={6} md={4} lg={2}>
                         <ColorBox
                            bgcolor="secondary.light"
@@ -154,7 +154,7 @@ const UIColor = () => {
             </Grid>
             <Grid item xs={12}>
                <SubCard title="Success Color">
-                  <Grid container spacing={gridSpacing}>
+                  <Grid container spacing={customization.gridSpacing}>
                      <Grid item xs={12} sm={6} md={4} lg={2}>
                         <ColorBox
                            bgcolor="success.light"
@@ -189,7 +189,7 @@ const UIColor = () => {
             </Grid>
             <Grid item xs={12}>
                <SubCard title="Orange Color">
-                  <Grid container spacing={gridSpacing}>
+                  <Grid container spacing={customization.gridSpacing}>
                      <Grid item xs={12} sm={6} md={4} lg={2}>
                         <ColorBox
                            bgcolor="orange.light"
@@ -217,7 +217,7 @@ const UIColor = () => {
             </Grid>
             <Grid item xs={12}>
                <SubCard title="Error Color">
-                  <Grid container spacing={gridSpacing}>
+                  <Grid container spacing={customization.gridSpacing}>
                      <Grid item xs={12} sm={6} md={4} lg={2}>
                         <ColorBox
                            bgcolor="error.light"
@@ -237,7 +237,7 @@ const UIColor = () => {
             </Grid>
             <Grid item xs={12}>
                <SubCard title="Warning Color">
-                  <Grid container spacing={gridSpacing}>
+                  <Grid container spacing={customization.gridSpacing}>
                      <Grid item xs={12} sm={6} md={4} lg={2}>
                         <ColorBox
                            bgcolor="warning.light"
@@ -266,7 +266,7 @@ const UIColor = () => {
             </Grid>
             <Grid item xs={12}>
                <SubCard title="Grey Color">
-                  <Grid container spacing={gridSpacing}>
+                  <Grid container spacing={customization.gridSpacing}>
                      <Grid item xs={12} sm={6} md={4} lg={2}>
                         <ColorBox bgcolor="grey.50" data={{ label: 'Grey-50', color: theme.palette.grey[50] }} title="grey[50]" dark />
                      </Grid>

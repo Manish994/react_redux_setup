@@ -116,13 +116,6 @@ const NavCollapse = ({ menu, level }) => {
                      {menu.title}
                   </Typography>
                }
-               secondary={
-                  menu.caption && (
-                     <Typography variant="caption" sx={{ ...theme.typography.subMenuCaption }} display="block" gutterBottom>
-                        {menu.caption}
-                     </Typography>
-                  )
-               }
             />
             {open ? (
                <IconChevronUp stroke={1.5} size="1rem" style={{ marginTop: 'auto', marginBottom: 'auto' }} />
