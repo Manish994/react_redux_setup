@@ -37,8 +37,9 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' && pr
            }
    ),
    [theme.breakpoints.up('md')]: {
-      marginLeft: open ? 0 : -(drawerwidth - 20),
-      width: `calc(100% - ${drawerwidth}px)`
+      marginLeft: open ? 0 : -(drawerwidth - 10),
+      width: `calc(100% - ${drawerwidth}px)`,
+      marginTop: '67px'
    },
    [theme.breakpoints.down('md')]: {
       marginLeft: '20px',
@@ -77,6 +78,7 @@ const MainLayout = () => {
             color="inherit"
             elevation={0}
             sx={{
+               //sidebar, header bg color
                bgcolor: theme.palette.background.default,
                transition: leftDrawerOpened ? theme.transitions.create('width') : 'none'
             }}

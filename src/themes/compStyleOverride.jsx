@@ -47,6 +47,15 @@ export default function componentStyleOverrides(theme) {
             }
          }
       },
+      //sidebar menu padding and onHover color
+      MuiList: {
+         styleOverrides: {
+            root: {
+               paddingTop: '0px',
+               paddingBottom: '0px'
+            }
+         }
+      },
       MuiListItemButton: {
          styleOverrides: {
             root: {
@@ -73,6 +82,7 @@ export default function componentStyleOverrides(theme) {
             }
          }
       },
+      //sidebar menu icon
       MuiListItemIcon: {
          styleOverrides: {
             root: {

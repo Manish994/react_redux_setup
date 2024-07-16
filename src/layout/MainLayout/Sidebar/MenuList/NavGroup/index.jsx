@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 // material-ui
-import { Typography } from '@mui/material';
+import { Typography, List } from '@mui/material';
 
 // project imports
 import NavItem from '../NavItem';
@@ -26,7 +26,7 @@ const NavGroup = ({ item }) => {
       }
    });
 
-   return <div>{items}</div>;
+   return <List>{items}</List>;
 };
 
 NavGroup.propTypes = {
