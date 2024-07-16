@@ -39,7 +39,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' && pr
    [theme.breakpoints.up('md')]: {
       marginLeft: open ? 0 : -(drawerwidth - 10),
       width: `calc(100% - ${drawerwidth}px)`,
-      marginTop: '67px'
+      marginTop: '85px'
    },
    [theme.breakpoints.down('md')]: {
       marginLeft: '20px',
