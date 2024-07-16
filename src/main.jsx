@@ -32,7 +32,6 @@ const root = createRoot(container);
 // Render the application wrapped with Redux Provider
 root.render(
    <Provider store={store}>
-      <div> Hello</div>
       <PersistGate loading={null} persistor={persistor}>
          <App />
       </PersistGate>
