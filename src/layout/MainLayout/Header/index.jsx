@@ -32,7 +32,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
                }
             }}
          >
-            <ButtonBase sx={{ borderRadius: '8px', overflow: 'hidden', display: { xs: 'none', md: 'block' }, flexGrow: 0.2 }}>
+            <ButtonBase sx={{ borderRadius: '8px', overflow: 'hidden', flexGrow: 0.2 }}>
                <Avatar
                   variant="rounded"
                   sx={{
@@ -52,7 +52,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
                   <IconMenu2 stroke={1.5} size="1.3rem" />
                </Avatar>
             </ButtonBase>
-            <Box component="span">
+            <Box component="span" sx={{ display: { xs: 'none', md: 'block' } }}>
                <LogoSection />
             </Box>
          </Box>
