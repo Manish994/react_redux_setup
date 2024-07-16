@@ -36,16 +36,16 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' && pr
               duration: theme.transitions.duration.leavingScreen
            }
    ),
-   [theme.breakpoints.up('md')]: {
-      marginLeft: open ? 0 : -(drawerwidth - 10),
-      width: `calc(100% - ${drawerwidth}px)`,
-      marginTop: '85px'
-   },
-   [theme.breakpoints.down('md')]: {
-      marginLeft: '20px',
-      width: `calc(100% - ${drawerwidth}px)`,
-      padding: '16px'
-   },
+   // [theme.breakpoints.up('md')]: {
+   //    marginLeft: open ? 0 : -(drawerwidth - 10),
+   //    width: `calc(100% - ${drawerwidth}px)`,
+   //    marginTop: '85px'
+   // },
+   // [theme.breakpoints.down('md')]: {
+   //    marginLeft: '20px',
+   //    width: `calc(100% - ${drawerwidth}px)`,
+   //    padding: '16px'
+   // },
    [theme.breakpoints.down('sm')]: {
       marginLeft: '10px',
       width: `calc(100% - ${drawerwidth}px)`,
