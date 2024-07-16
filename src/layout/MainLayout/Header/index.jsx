@@ -32,10 +32,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
                }
             }}
          >
-            <Box component="span" sx={{ display: { xs: 'none', md: 'block' }, flexGrow: 1 }}>
-               <LogoSection />
-            </Box>
-            <ButtonBase sx={{ borderRadius: '8px', overflow: 'hidden' }}>
+            <ButtonBase sx={{ borderRadius: '8px', overflow: 'hidden', display: { xs: 'none', md: 'block' }, flexGrow: 0.2 }}>
                <Avatar
                   variant="rounded"
                   sx={{
@@ -55,6 +52,9 @@ const Header = ({ handleLeftDrawerToggle }) => {
                   <IconMenu2 stroke={1.5} size="1.3rem" />
                </Avatar>
             </ButtonBase>
+            <Box component="span">
+               <LogoSection />
+            </Box>
          </Box>
 
          {/* header search */}
