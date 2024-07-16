@@ -24,9 +24,6 @@ import '@fontsource/poppins/500.css';
 import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
 
-// style + assets
-import 'assets/scss/style.scss';
-
 // Get the root container element
 const container = document.getElementById('root');
 const root = createRoot(container);
