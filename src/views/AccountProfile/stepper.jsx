@@ -8,6 +8,9 @@ import LockTwoToneIcon from '@mui/icons-material/LockTwoTone';
 import MailTwoToneIcon from '@mui/icons-material/MailTwoTone';
 import SwipeableViews from 'react-swipeable-views';
 
+//
+import Profile from './profile';
+
 const StepperProfile = () => {
    const [value, setValue] = useState(0);
 
@@ -38,9 +41,9 @@ const StepperProfile = () => {
             <Tab icon={<LockTwoToneIcon />} iconPosition="start" label="Change Password" sx={styles} />
             <Tab icon={<MailTwoToneIcon />} iconPosition="start" label="Settings" sx={styles} />
          </Tabs>
-         <Divider />
+         <Divider style={{ marginBottom: '24px' }} />
          <SwipeableViews index={value} onChangeIndex={handleChangeIndex}>
-            <div>Item One</div>
+            <Profile />
             <div>Item Two</div>
             <div>Item Three</div>
             <div>Item Four</div>
