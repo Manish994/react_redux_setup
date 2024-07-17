@@ -19,25 +19,17 @@ const Profile = () => {
                <Grid item xs={12} sm={5}>
                   <SubCard
                      title={
-                        <div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-3nargb">
+                        <Grid>
                            <Grid container spacing={2} alignItems="center">
                               <Grid item>
-                                 <Avatar
-                                    alt="User 1"
-                                    src="/assets/avatar-3-DAakmaVf.png"
-                                    className="MuiAvatar-root MuiAvatar-circular css-pzz1c4"
-                                 />
+                                 <Avatar alt="User 1" src="/assets/avatar-3-DAakmaVf.png" />
                               </Grid>
                               <Grid item xs>
-                                 <Typography variant="subtitle1" className="MuiTypography-root MuiTypography-subtitle1 css-10qvlxs">
-                                    Abinash Dhakal
-                                 </Typography>
-                                 <Typography variant="subtitle2" className="MuiTypography-root MuiTypography-subtitle2 css-74ieoe">
-                                    Red Hacker
-                                 </Typography>
+                                 <Typography variant="subtitle1">Abinash Dhakal</Typography>
+                                 <Typography variant="subtitle2">Red Hacker</Typography>
                               </Grid>
                            </Grid>
-                        </div>
+                        </Grid>
                      }
                   ></SubCard>
                </Grid>
