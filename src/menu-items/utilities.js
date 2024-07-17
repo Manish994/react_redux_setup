@@ -1,12 +1,13 @@
 // assets
-import { IconTypography, IconPalette, IconShadow, IconWindmill } from '@tabler/icons-react';
+import { IconTypography, IconPalette, IconShadow, IconWindmill, IconUserCheck } from '@tabler/icons-react';
 
 // constant
 const icons = {
    IconTypography,
    IconPalette,
    IconShadow,
-   IconWindmill
+   IconWindmill,
+   IconUserCheck
 };
 
 // ==============================|| UTILITIES MENU ITEMS ||============================== //
@@ -16,6 +17,14 @@ const utilities = {
    title: 'Utilities',
    type: 'group',
    children: [
+      {
+         id: 'util-accountprofile',
+         title: 'Account Profile',
+         type: 'item',
+         url: '/utils/account-profile',
+         icon: icons.IconUserCheck,
+         breadcrumbs: true
+      },
       {
          id: 'util-typography',
          title: 'Typography',

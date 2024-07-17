@@ -11,6 +11,7 @@ const DashboardDefault = Loadable(lazy(() => import('views/dashboard')));
 const UtilsTypography = Loadable(lazy(() => import('views/utilities/Typography')));
 const UtilsColor = Loadable(lazy(() => import('views/utilities/Color')));
 const UtilsShadow = Loadable(lazy(() => import('views/utilities/Shadow')));
+const AccountProfile = Loadable(lazy(() => import('views/AccountProfile')));
 // const UtilsMaterialIcons = Loadable(lazy(() => import('views/utilities/MaterialIcons')));
 // const UtilsTablerIcons = Loadable(lazy(() => import('views/utilities/TablerIcons')));
 
@@ -33,6 +34,15 @@ const MainRoutes = {
             {
                path: 'default',
                element: <DashboardDefault />
+            }
+         ]
+      },
+      {
+         path: 'utils',
+         children: [
+            {
+               path: 'account-profile',
+               element: <AccountProfile />
             }
          ]
       },
