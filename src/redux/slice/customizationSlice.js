@@ -28,11 +28,14 @@ const customizationSlice = createSlice({
       },
       setBorderRadius(state, action) {
          state.borderRadius = action.payload.borderRadius;
+      },
+      setDrawerWidth(state, action) {
+         state.drawerWidth = action.payload.drawerWidth;
       }
    }
 });
 
-export const { menuOpen, setMenu, setFontFamily, setBorderRadius } = customizationSlice.actions;
+export const { menuOpen, setMenu, setFontFamily, setBorderRadius, setDrawerWidth } = customizationSlice.actions;
 
 export default customizationSlice.reducer;
 
