@@ -6,6 +6,7 @@ import DescriptionTwoToneIcon from '@mui/icons-material/DescriptionTwoTone';
 import LibraryBooksTwoToneIcon from '@mui/icons-material/LibraryBooksTwoTone';
 import LockTwoToneIcon from '@mui/icons-material/LockTwoTone';
 import MailTwoToneIcon from '@mui/icons-material/MailTwoTone';
+import SwipeableViews from 'react-swipeable-views';
 
 const StepperProfile = () => {
    const [value, setValue] = useState(0);
@@ -13,6 +14,12 @@ const StepperProfile = () => {
    const handleChange = (event, newValue) => {
       setValue(newValue);
    };
+
+   const handleChangeIndex = (index) => {
+      setValue(index);
+   };
+
+   const styles = { color: 'rgb(54,65,82)', fontSize: '0.875rem', fontWeight: '500', lineHeight: '1.25', textTransform: 'capitalize' };
 
    return (
       <MainCard>
@@ -25,38 +32,20 @@ const StepperProfile = () => {
             indicatorColor="primary"
             textColor="primary"
          >
-            <Tab
-               icon={<AccountCircleTwoToneIcon />}
-               iconPosition="start"
-               label="Profile"
-               sx={{ color: 'rgb(54,65,82)', fontSize: '0.875rem', fontWeight: '500', lineHeight: '1.25', textTransform: 'capitalize' }}
-            />
-            <Tab
-               icon={<DescriptionTwoToneIcon />}
-               iconPosition="start"
-               label="Personal Details"
-               sx={{ color: 'rgb(54,65,82)', fontSize: '0.875rem', fontWeight: '500', lineHeight: '1.25', textTransform: 'capitalize' }}
-            />
-            <Tab
-               icon={<LibraryBooksTwoToneIcon />}
-               iconPosition="start"
-               label="My Account"
-               sx={{ color: 'rgb(54,65,82)', fontSize: '0.875rem', fontWeight: '500', lineHeight: '1.25', textTransform: 'capitalize' }}
-            />
-            <Tab
-               icon={<LockTwoToneIcon />}
-               iconPosition="start"
-               label="Change Password"
-               sx={{ color: 'rgb(54,65,82)', fontSize: '0.875rem', fontWeight: '500', lineHeight: '1.25', textTransform: 'capitalize' }}
-            />
-            <Tab
-               icon={<MailTwoToneIcon />}
-               iconPosition="start"
-               label="Settings"
-               sx={{ color: 'rgb(54,65,82)', fontSize: '0.875rem', fontWeight: '500', lineHeight: '1.25', textTransform: 'capitalize' }}
-            />
+            <Tab icon={<AccountCircleTwoToneIcon />} iconPosition="start" label="Profile" sx={styles} />
+            <Tab icon={<DescriptionTwoToneIcon />} iconPosition="start" label="Personal Details" sx={styles} />
+            <Tab icon={<LibraryBooksTwoToneIcon />} iconPosition="start" label="My Account" sx={styles} />
+            <Tab icon={<LockTwoToneIcon />} iconPosition="start" label="Change Password" sx={styles} />
+            <Tab icon={<MailTwoToneIcon />} iconPosition="start" label="Settings" sx={styles} />
          </Tabs>
          <Divider />
+         <SwipeableViews index={value} onChangeIndex={handleChangeIndex}>
+            <div>Item One</div>
+            <div>Item Two</div>
+            <div>Item Three</div>
+            <div>Item Four</div>
+            <div>Item Five</div>
+         </SwipeableViews>
       </MainCard>
    );
 };
