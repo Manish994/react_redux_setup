@@ -20,7 +20,7 @@ const Profile = () => {
       <Grid container spacing={customization.gridSpacing}>
          <Grid container item xs={12} md={12}>
             <Grid container spacing={2}>
-               <Grid item xs={12} sm={5}>
+               <Grid item xs={12} sm={4}>
                   <SubCard
                      title={
                         <Grid container spacing={2} alignItems="center">
@@ -34,50 +34,74 @@ const Profile = () => {
                         </Grid>
                      }
                   >
-                     <Grid container direction="column">
-                        <Grid item>
-                           <List>
-                              <ListItemButton>
-                                 <ListItemIcon>
-                                    <EmailIcon />
-                                 </ListItemIcon>
-                                 <Typography variant="subtitle1">Email</Typography>
-                                 <ListItemText>
-                                    <MuiTypography variant="subtitle2" align="right">
-                                       demo@sample.com
-                                    </MuiTypography>
-                                 </ListItemText>
-                              </ListItemButton>
-                              <Divider />
-                              <ListItemButton>
-                                 <ListItemIcon>
-                                    <SmartphoneIcon />
-                                 </ListItemIcon>
-                                 <Typography variant="subtitle1">Phone</Typography>
-                                 <ListItemText>
-                                    <MuiTypography variant="subtitle2" align="right">
-                                       (+99) 9999 999 999
-                                    </MuiTypography>
-                                 </ListItemText>
-                              </ListItemButton>
-                              <Divider />
-                              <ListItemButton>
-                                 <ListItemIcon>
-                                    <LocationOnIcon />
-                                 </ListItemIcon>
-                                 <Typography variant="subtitle1">Location</Typography>
-                                 <ListItemText>
-                                    <MuiTypography variant="subtitle2" align="right">
-                                       Melbourne
-                                    </MuiTypography>
-                                 </ListItemText>
-                              </ListItemButton>
-                           </List>
+                     <Grid container direction="column" item sx={{ marginBottom: '30px' }}>
+                        <List>
+                           <ListItemButton>
+                              <ListItemIcon>
+                                 <EmailIcon />
+                              </ListItemIcon>
+                              <Typography variant="subtitle1">Email</Typography>
+                              <ListItemText>
+                                 <MuiTypography variant="subtitle2" align="right">
+                                    demo@sample.com
+                                 </MuiTypography>
+                              </ListItemText>
+                           </ListItemButton>
+                           <Divider />
+                           <ListItemButton>
+                              <ListItemIcon>
+                                 <SmartphoneIcon />
+                              </ListItemIcon>
+                              <Typography variant="subtitle1">Phone</Typography>
+                              <ListItemText>
+                                 <MuiTypography variant="subtitle2" align="right">
+                                    (+99) 9999 999 999
+                                 </MuiTypography>
+                              </ListItemText>
+                           </ListItemButton>
+                           <Divider />
+                           <ListItemButton>
+                              <ListItemIcon>
+                                 <LocationOnIcon />
+                              </ListItemIcon>
+                              <Typography variant="subtitle1">Location</Typography>
+                              <ListItemText>
+                                 <MuiTypography variant="subtitle2" align="right">
+                                    Melbourne
+                                 </MuiTypography>
+                              </ListItemText>
+                           </ListItemButton>
+                        </List>
+                     </Grid>
+                     <Grid container direction="row" item>
+                        <Grid item xs={4}>
+                           <Typography variant="h3" align="center">
+                              37
+                           </Typography>
+                           <Typography variant="subtitle2" align="center">
+                              Mails
+                           </Typography>
+                        </Grid>
+                        <Grid item xs={4}>
+                           <Typography variant="h3" align="center">
+                              2749
+                           </Typography>
+                           <Typography variant="subtitle2" align="center">
+                              Followers
+                           </Typography>
+                        </Grid>
+                        <Grid item xs={4}>
+                           <Typography variant="h3" align="center">
+                              678
+                           </Typography>
+                           <Typography variant="subtitle2" align="center">
+                              Following
+                           </Typography>
                         </Grid>
                      </Grid>
                   </SubCard>
                </Grid>
-               <Grid item xs={12} sm={7}>
+               <Grid item xs={12} sm={8}>
                   <SubCard title="Sub title">
                      <Grid container direction="column" spacing={1}>
                         <Grid item>
