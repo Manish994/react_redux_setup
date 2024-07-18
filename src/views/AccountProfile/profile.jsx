@@ -46,6 +46,7 @@ const Profile = () => {
                            </Grid>
                         </Grid>
                      }
+                     sx={{ marginBottom: '24px' }}
                   >
                      <Grid container direction="column" item sx={{ marginBottom: '30px' }}>
                         <List>
@@ -113,9 +114,45 @@ const Profile = () => {
                         </Grid>
                      </Grid>
                   </SubCard>
+                  <SubCard title="Transaction Details">
+                     <Grid container direction="row" item>
+                        <Grid item xs={3}>
+                           <Typography variant="h3" align="center">
+                              37
+                           </Typography>
+                           <Typography variant="subtitle2" align="center">
+                              INITIATED
+                           </Typography>
+                        </Grid>
+                        <Grid item xs={3}>
+                           <Typography variant="h3" align="center">
+                              10
+                           </Typography>
+                           <Typography variant="subtitle2" align="center">
+                              PAID
+                           </Typography>
+                        </Grid>
+                        <Grid item xs={3}>
+                           <Typography variant="h3" align="center">
+                              20
+                           </Typography>
+                           <Typography variant="subtitle2" align="center">
+                              FAILED
+                           </Typography>
+                        </Grid>
+                        <Grid item xs={3}>
+                           <Typography variant="h3" align="center">
+                              678
+                           </Typography>
+                           <Typography variant="subtitle2" align="center">
+                              CANCELLED
+                           </Typography>
+                        </Grid>
+                     </Grid>
+                  </SubCard>
                </Grid>
                <Grid item xs={12} sm={8}>
-                  <SubCard title="Personal Details">
+                  <SubCard title="Personal Details" sx={{ marginBottom: '24px' }}>
                      <Grid container direction="column" spacing={1}>
                         <Grid item>
                            <TableContainer component={Paper}>
@@ -204,50 +241,6 @@ const Profile = () => {
                         </Grid>
                      </Grid>
                   </SubCard>
-               </Grid>
-            </Grid>
-         </Grid>
-         <Grid container item xs={12} md={12}>
-            <Grid container spacing={2}>
-               <Grid item xs={12} sm={4}>
-                  <SubCard title="Transaction Details">
-                     <Grid container direction="row" item>
-                        <Grid item xs={3}>
-                           <Typography variant="h3" align="center">
-                              37
-                           </Typography>
-                           <Typography variant="subtitle2" align="center">
-                              INITIATED
-                           </Typography>
-                        </Grid>
-                        <Grid item xs={3}>
-                           <Typography variant="h3" align="center">
-                              10
-                           </Typography>
-                           <Typography variant="subtitle2" align="center">
-                              PAID
-                           </Typography>
-                        </Grid>
-                        <Grid item xs={3}>
-                           <Typography variant="h3" align="center">
-                              20
-                           </Typography>
-                           <Typography variant="subtitle2" align="center">
-                              FAILED
-                           </Typography>
-                        </Grid>
-                        <Grid item xs={3}>
-                           <Typography variant="h3" align="center">
-                              678
-                           </Typography>
-                           <Typography variant="subtitle2" align="center">
-                              CANCELLED
-                           </Typography>
-                        </Grid>
-                     </Grid>
-                  </SubCard>
-               </Grid>
-               <Grid item xs={12} sm={8}>
                   <SubCard title="KYC Details">
                      <Grid container direction="column" spacing={1}>
                         <Grid item>
