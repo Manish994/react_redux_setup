@@ -137,10 +137,31 @@ const Profile = () => {
                                     </TableRow>
                                     <TableRow>
                                        <TableCell component="th" scope="row">
-                                          <MuiTypography variant="subtitle1"> Father Name</MuiTypography>
+                                          <MuiTypography variant="subtitle1"> Nick Name</MuiTypography>
                                        </TableCell>
                                        <TableCell>:</TableCell>
                                        <TableCell>Mr. Deepen Handgun</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> Gender</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>Male</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> Date Of Birth</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>2012-02-03</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> Occupation</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>Teacher</TableCell>
                                     </TableRow>
                                     <TableRow>
                                        <TableCell component="th" scope="row">
@@ -148,13 +169,6 @@ const Profile = () => {
                                        </TableCell>
                                        <TableCell>:</TableCell>
                                        <TableCell>Street 110-B Kalians Bag, Dewan, M.P. INDIA</TableCell>
-                                    </TableRow>
-                                    <TableRow>
-                                       <TableCell component="th" scope="row">
-                                          <MuiTypography variant="subtitle1"> Zip Code</MuiTypography>
-                                       </TableCell>
-                                       <TableCell>:</TableCell>
-                                       <TableCell>12345</TableCell>
                                     </TableRow>
                                     <TableRow>
                                        <TableCell component="th" scope="row">
@@ -172,10 +186,17 @@ const Profile = () => {
                                     </TableRow>
                                     <TableRow>
                                        <TableCell component="th" scope="row">
-                                          <MuiTypography variant="subtitle1"> Website</MuiTypography>
+                                          <MuiTypography variant="subtitle1"> Country</MuiTypography>
                                        </TableCell>
                                        <TableCell>:</TableCell>
-                                       <TableCell>http://example.com</TableCell>
+                                       <TableCell>Nepal</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> Nationality</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>Australian</TableCell>
                                     </TableRow>
                                  </TableBody>
                               </Table>
@@ -226,7 +247,112 @@ const Profile = () => {
                      </Grid>
                   </SubCard>
                </Grid>
-               <Grid item xs={12} sm={8}></Grid>
+               <Grid item xs={12} sm={8}>
+                  <SubCard title="KYC Details">
+                     <Grid container direction="column" spacing={1}>
+                        <Grid item>
+                           <TableContainer component={Paper}>
+                              <Table
+                                 size="small"
+                                 sx={{
+                                    [`& .${tableCellClasses.root}`]: {
+                                       borderBottom: 'none'
+                                    }
+                                 }}
+                              >
+                                 <TableBody>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> Id Type</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>JWT User</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> Id Number</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>Mr. Deepen Handgun</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> Id Issue Date</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>Street 110-B Kalians Bag, Dewan, M.P. INDIA</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> Id Expiry Date</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>12345</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1">Issuing Authority</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>+0 123456789 , +0 123456789</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1">Reference Number</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>support@example.com</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> UnitNumber</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>http://example.com</TableCell>
+                                    </TableRow>
+
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> StreetNumber</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>http://example.com</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> StreetType</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>http://example.com</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> SuburbName</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>http://example.com</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> Postcode</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>http://example.com</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> StateCode</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>http://example.com</TableCell>
+                                    </TableRow>
+                                 </TableBody>
+                              </Table>
+                           </TableContainer>
+                        </Grid>
+                     </Grid>
+                  </SubCard>
+               </Grid>
             </Grid>
          </Grid>
       </Grid>
