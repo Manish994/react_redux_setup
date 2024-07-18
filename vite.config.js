@@ -85,7 +85,7 @@ export default defineConfig(({ command }) => {
          plugins: [
             ...config.plugins,
             visualizer({
-               template: 'network', //sunburst network
+               template: 'treemap', //sunburst Treemap Network
                open: true,
                gzipSize: true,
                brotliSize: true,
