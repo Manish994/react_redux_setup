@@ -4,7 +4,20 @@ import Grid from '@mui/material/Grid';
 import MuiTypography from '@mui/material/Typography';
 import Typography from '@mui/material/Typography';
 import Avatar from 'ui-component/extended/Avatar';
-import { List, ListItemButton, ListItemIcon, ListItemText, Divider } from '@mui/material';
+import {
+   List,
+   ListItemButton,
+   ListItemIcon,
+   ListItemText,
+   Divider,
+   Table,
+   TableBody,
+   TableCell,
+   TableContainer,
+   TableRow,
+   Paper,
+   tableCellClasses
+} from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -102,17 +115,71 @@ const Profile = () => {
                   </SubCard>
                </Grid>
                <Grid item xs={12} sm={8}>
-                  <SubCard title="Sub title">
+                  <SubCard title="Personal Details">
                      <Grid container direction="column" spacing={1}>
                         <Grid item>
-                           <MuiTypography variant="subtitle1" gutterBottom>
-                              subtitle1. Lorem ipsum dolor sit connecter adieu siccing eliot. Quos blanditiis tenetur
-                           </MuiTypography>
-                        </Grid>
-                        <Grid item>
-                           <MuiTypography variant="subtitle2" gutterBottom>
-                              subtitle2. Lorem ipsum dolor sit connecter adieu siccing eliot. Quos blanditiis tenetur
-                           </MuiTypography>
+                           <TableContainer component={Paper}>
+                              <Table
+                                 size="small"
+                                 sx={{
+                                    [`& .${tableCellClasses.root}`]: {
+                                       borderBottom: 'none'
+                                    }
+                                 }}
+                              >
+                                 <TableBody>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> Full Name</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>JWT User</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> Father Name</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>Mr. Deepen Handgun</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> Address</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>Street 110-B Kalians Bag, Dewan, M.P. INDIA</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> Zip Code</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>12345</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> Phone</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>+0 123456789 , +0 123456789</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> Email</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>support@example.com</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                       <TableCell component="th" scope="row">
+                                          <MuiTypography variant="subtitle1"> Website</MuiTypography>
+                                       </TableCell>
+                                       <TableCell>:</TableCell>
+                                       <TableCell>http://example.com</TableCell>
+                                    </TableRow>
+                                 </TableBody>
+                              </Table>
+                           </TableContainer>
                         </Grid>
                      </Grid>
                   </SubCard>
