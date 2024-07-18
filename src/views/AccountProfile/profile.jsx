@@ -67,7 +67,7 @@ const Profile = () => {
                      }
                      sx={{ marginBottom: '24px' }}
                   >
-                     <Grid container direction="column" item sx={{ marginBottom: '30px' }}>
+                     <Grid container direction="column" item sx={{ marginBottom: '24px' }}>
                         <List>
                            <ListItemButton>
                               <ListItemIcon>
@@ -105,32 +105,6 @@ const Profile = () => {
                               </ListItemText>
                            </ListItemButton>
                         </List>
-                     </Grid>
-                     <Grid container direction="row" item>
-                        <Grid item xs={4}>
-                           <Typography variant="h3" align="center">
-                              37
-                           </Typography>
-                           <Typography variant="subtitle2" align="center">
-                              Mails
-                           </Typography>
-                        </Grid>
-                        <Grid item xs={4}>
-                           <Typography variant="h3" align="center">
-                              2749
-                           </Typography>
-                           <Typography variant="subtitle2" align="center">
-                              Followers
-                           </Typography>
-                        </Grid>
-                        <Grid item xs={4}>
-                           <Typography variant="h3" align="center">
-                              678
-                           </Typography>
-                           <Typography variant="subtitle2" align="center">
-                              Following
-                           </Typography>
-                        </Grid>
                      </Grid>
                   </SubCard>
                   <SubCard title="Transaction Details" sx={{ marginBottom: '24px' }}>
