@@ -10,6 +10,7 @@ import SwipeableViews from 'react-swipeable-views';
 
 //
 import Profile from './profile';
+import PersonalDetails from './personalDetails';
 
 const StepperProfile = () => {
    const [value, setValue] = useState(0);
@@ -44,7 +45,7 @@ const StepperProfile = () => {
          <Divider style={{ marginBottom: '24px' }} />
          <SwipeableViews index={value} onChangeIndex={handleChangeIndex}>
             <Profile />
-            <div>Item Two</div>
+            <PersonalDetails />
             <div>Item Three</div>
             <div>Item Four</div>
             <div>Item Five</div>

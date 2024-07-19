@@ -52,7 +52,7 @@ const Profile = () => {
       <Grid container spacing={customization.gridSpacing}>
          <Grid container item xs={12} md={12}>
             <Grid container spacing={2}>
-               <Grid item xs={12} sm={4}>
+               <Grid item xs={12} sm={5}>
                   <SubCard
                      title={
                         <Grid container spacing={2} alignItems="center">
@@ -184,7 +184,7 @@ const Profile = () => {
                      </ImageList>
                   </SubCard>
                </Grid>
-               <Grid item xs={12} sm={8}>
+               <Grid item xs={12} sm={7}>
                   <SubCard title="Personal Details" sx={{ marginBottom: '24px' }}>
                      <Grid container direction="column" spacing={1}>
                         <Grid item>
