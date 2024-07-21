@@ -11,6 +11,7 @@ import SwipeableViews from 'react-swipeable-views';
 //
 import Profile from './profile';
 import PersonalDetails from './personalDetails';
+import KycDetails from './kycDetails';
 
 const StepperProfile = () => {
    const [value, setValue] = useState(0);
@@ -38,6 +39,7 @@ const StepperProfile = () => {
          >
             <Tab icon={<AccountCircleTwoToneIcon />} iconPosition="start" label="Profile" sx={styles} />
             <Tab icon={<DescriptionTwoToneIcon />} iconPosition="start" label="Personal Details" sx={styles} />
+            <Tab icon={<DescriptionTwoToneIcon />} iconPosition="start" label="KYC Details" sx={styles} />
             <Tab icon={<LibraryBooksTwoToneIcon />} iconPosition="start" label="My Account" sx={styles} />
             <Tab icon={<LockTwoToneIcon />} iconPosition="start" label="Change Password" sx={styles} />
             <Tab icon={<MailTwoToneIcon />} iconPosition="start" label="Settings" sx={styles} />
@@ -46,6 +48,7 @@ const StepperProfile = () => {
          <SwipeableViews index={value} onChangeIndex={handleChangeIndex}>
             <Profile />
             <PersonalDetails />
+            <KycDetails />
             <div>Item Three</div>
             <div>Item Four</div>
             <div>Item Five</div>
