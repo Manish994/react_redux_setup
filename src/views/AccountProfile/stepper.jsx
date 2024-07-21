@@ -14,6 +14,7 @@ import PersonalDetails from './personalDetails';
 import KycDetails from './kycDetails';
 import MyAccount from './myAccount';
 import Security from './security';
+import AdminHistory from './settings';
 
 const StepperProfile = () => {
    const [value, setValue] = useState(0);
@@ -53,9 +54,7 @@ const StepperProfile = () => {
             <KycDetails />
             <MyAccount />
             <Security />
-
-            <div>Item Four</div>
-            <div>Item Five</div>
+            <AdminHistory />
          </SwipeableViews>
       </MainCard>
    );

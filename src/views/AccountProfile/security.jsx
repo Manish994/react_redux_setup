@@ -54,13 +54,13 @@ const Security = () => {
                <SubCard title="Advance Settings">
                   <Box p={2}>
                      <Typography variant="h6" gutterBottom>
-                        SECURE BROWSING
+                        De-Activated Account
                      </Typography>
                      <FormControlLabel control={<Switch />} label="Browsing Securely (https) when it's necessary" />
                      <br></br>
                      <br></br>
                      <Typography variant="h6" gutterBottom>
-                        LOGIN NOTIFICATIONS
+                        Change KYC Status
                      </Typography>
                      <FormControlLabel control={<Switch />} label="Notify when login attempted from other place" />
                      <br></br>
