@@ -12,6 +12,7 @@ import SwipeableViews from 'react-swipeable-views';
 import Profile from './profile';
 import PersonalDetails from './personalDetails';
 import KycDetails from './kycDetails';
+import MyAccount from './myAccount';
 
 const StepperProfile = () => {
    const [value, setValue] = useState(0);
@@ -49,6 +50,7 @@ const StepperProfile = () => {
             <Profile />
             <PersonalDetails />
             <KycDetails />
+            <MyAccount />
             <div>Item Three</div>
             <div>Item Four</div>
             <div>Item Five</div>
