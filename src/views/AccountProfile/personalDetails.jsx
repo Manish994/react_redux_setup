@@ -1,5 +1,9 @@
 import { useSelector } from 'react-redux';
-import { Avatar, Box, Button, Grid, Typography } from '@mui/material';
+import { Avatar, Box, Button, Grid, Typography, FormControl, TextField, Autocomplete } from '@mui/material';
+
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker as MuiDatePicker } from '@mui/x-date-pickers';
 
 // project imports
 import SubCard from 'ui-component/cards/SubCard';
@@ -35,7 +39,156 @@ const PersonalDetails = () => {
                   </SubCard>
                </Grid>
                <Grid item xs={12} sm={8}>
-                  <SubCard title="Personal Information"> </SubCard>
+                  <SubCard title="Personal Information" style={{ marginBottom: '24px' }}>
+                     <Grid container spacing={2}>
+                        <Grid item xs={12} sm={4} md={6}>
+                           <FormControl fullWidth>
+                              <TextField
+                                 fullWidth
+                                 label="First Name"
+                                 size="small"
+                                 margin="normal"
+                                 name="firstName"
+                                 type="text"
+                                 autoComplete="off"
+                              />
+                           </FormControl>
+                        </Grid>
+                        <Grid item xs={12} sm={4} md={6}>
+                           <FormControl fullWidth>
+                              <TextField
+                                 fullWidth
+                                 label="Middle Name"
+                                 size="small"
+                                 margin="normal"
+                                 name="middleName"
+                                 type="text"
+                                 autoComplete="off"
+                              />
+                           </FormControl>
+                        </Grid>
+                     </Grid>
+                     <Grid container spacing={2}>
+                        <Grid item xs={12} sm={4} md={6}>
+                           <FormControl fullWidth>
+                              <TextField
+                                 fullWidth
+                                 label="Last Name"
+                                 size="small"
+                                 margin="normal"
+                                 name="firstName"
+                                 type="text"
+                                 autoComplete="off"
+                              />
+                           </FormControl>
+                        </Grid>
+                        <Grid item xs={12} sm={4} md={6}>
+                           <FormControl fullWidth>
+                              <TextField
+                                 fullWidth
+                                 label="Nick Name"
+                                 size="small"
+                                 margin="normal"
+                                 name="middleName"
+                                 type="text"
+                                 autoComplete="off"
+                              />
+                           </FormControl>
+                        </Grid>
+                     </Grid>
+                     <Grid container spacing={2}>
+                        <Grid item xs={12} sm={6} sx={{ mt: 2 }}>
+                           <FormControl fullWidth>
+                              <Autocomplete
+                                 options={[]}
+                                 getOptionLabel={(option) => option.text}
+                                 renderInput={(params) => <TextField {...params} size="small" label="Gender" color="secondary" />}
+                              />
+                           </FormControl>
+                        </Grid>
+                        <Grid item xs={12} sm={6} sx={{ mt: 2 }}>
+                           <FormControl fullWidth>
+                              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                 <MuiDatePicker
+                                    name="dateOfBirth"
+                                    label="Date Of Birth"
+                                    slotProps={{
+                                       textField: {
+                                          InputProps: {
+                                             size: 'small'
+                                             //sx: { fontSize: 10 },
+                                          }
+                                       }
+                                    }}
+                                 />
+                              </LocalizationProvider>
+                           </FormControl>
+                        </Grid>
+                     </Grid>
+                     <Grid container spacing={2}>
+                        <Grid item xs={12} sm={6} sx={{ mt: 2 }}>
+                           <FormControl fullWidth>
+                              <Autocomplete
+                                 options={[]}
+                                 getOptionLabel={(option) => option.text}
+                                 renderInput={(params) => <TextField {...params} size="small" label="Occupation" color="secondary" />}
+                              />
+                           </FormControl>
+                        </Grid>
+                     </Grid>
+                  </SubCard>
+                  <SubCard title="Contact Information" style={{ marginBottom: '24px' }}>
+                     <Grid container spacing={2}>
+                        <Grid item xs={12} sm={4} md={6}>
+                           <FormControl fullWidth>
+                              <TextField
+                                 fullWidth
+                                 label="Phone Number"
+                                 size="small"
+                                 margin="normal"
+                                 name="firstName"
+                                 type="text"
+                                 autoComplete="off"
+                              />
+                           </FormControl>
+                        </Grid>
+                        <Grid item xs={12} sm={4} md={6}>
+                           <FormControl fullWidth>
+                              <TextField
+                                 fullWidth
+                                 label="Email"
+                                 size="small"
+                                 margin="normal"
+                                 name="middleName"
+                                 type="text"
+                                 autoComplete="off"
+                              />
+                           </FormControl>
+                        </Grid>
+                     </Grid>
+                  </SubCard>
+                  <SubCard title="Nationality Information">
+                     <Grid container spacing={2}>
+                        <Grid item xs={12} sm={6} sx={{ mt: 2 }}>
+                           <FormControl fullWidth>
+                              <Autocomplete
+                                 options={[]}
+                                 getOptionLabel={(option) => option.text}
+                                 renderInput={(params) => <TextField {...params} size="small" label="Country" color="secondary" />}
+                              />
+                           </FormControl>
+                        </Grid>
+                        <Grid item xs={12} sm={6} sx={{ mt: 2 }}>
+                           <FormControl fullWidth>
+                              <Autocomplete
+                                 options={[]}
+                                 getOptionLabel={(option) => option.text}
+                                 renderInput={(params) => <TextField {...params} size="small" label="Nationality" color="secondary" />}
+                              />
+                           </FormControl>
+                        </Grid>
+                     </Grid>
+                  </SubCard>
                </Grid>
             </Grid>
          </Grid>
