@@ -45,7 +45,7 @@ const StepperProfile = () => {
             <Tab icon={<DescriptionTwoToneIcon />} iconPosition="start" label="KYC Details" sx={styles} />
             <Tab icon={<LibraryBooksTwoToneIcon />} iconPosition="start" label="My Account" sx={styles} />
             <Tab icon={<LockTwoToneIcon />} iconPosition="start" label="Security" sx={styles} />
-            <Tab icon={<MailTwoToneIcon />} iconPosition="start" label="Settings" sx={styles} />
+            <Tab icon={<MailTwoToneIcon />} iconPosition="start" label="History" sx={styles} />
          </Tabs>
          <Divider style={{ marginBottom: '24px' }} />
          <SwipeableViews index={value} onChangeIndex={handleChangeIndex}>

@@ -26,10 +26,7 @@ const adminHistory = [
 const AdminHistory = () => {
    return (
       <SubCard title="Change Password" sx={{ marginBottom: '24px' }}>
-         <Box p={2}>
-            <Typography variant="h6" gutterBottom>
-               Admin History
-            </Typography>
+         <Box>
             <List>
                {adminHistory.map((history, index) => (
                   <ListItem key={index} divider>
