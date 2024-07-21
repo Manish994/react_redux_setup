@@ -167,7 +167,7 @@ const PersonalDetails = () => {
                         </Grid>
                      </Grid>
                   </SubCard>
-                  <SubCard title="Nationality Information">
+                  <SubCard title="Nationality Information" style={{ marginBottom: '24px' }}>
                      <Grid container spacing={2}>
                         <Grid item xs={12} sm={6} sx={{ mt: 2 }}>
                            <FormControl fullWidth>
@@ -189,6 +189,14 @@ const PersonalDetails = () => {
                         </Grid>
                      </Grid>
                   </SubCard>
+                  <Grid sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                     <Button component="label" sx={{ marginRight: 2 }}>
+                        Cancel
+                     </Button>
+                     <Button variant="contained" color="primary" component="label">
+                        Update Profile
+                     </Button>
+                  </Grid>
                </Grid>
             </Grid>
          </Grid>
