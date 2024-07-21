@@ -1,41 +1,43 @@
-import React from 'react';
-import { Avatar, Box, Grid, Stack, SvgIcon, Typography } from '@mui/material';
-import CameraIcon from '@mui/icons-material/CameraAlt'; // or use any icon from MUI icons
+import { useSelector } from 'react-redux';
+import { Avatar, Box, Button, Grid, Typography } from '@mui/material';
+
+// project imports
+import SubCard from 'ui-component/cards/SubCard';
+import User1 from 'assets/images/users/user-round.svg';
 
 const PersonalDetails = () => {
+   const customization = useSelector((state) => state.customization);
+
    return (
-      <Grid container>
-         <Grid item xs={12}>
-            <Box position="relative" display="inline-block" sx={{ cursor: 'pointer' }}>
-               <Avatar alt="Avatar 1" src="/assets/default-CgtsF9c7.png" sx={{ width: 120, height: 120 }} />
-               <Box
-                  sx={{
-                     position: 'absolute',
-                     top: 0,
-                     left: 0,
-                     width: '100%',
-                     height: '100%',
-                     bgcolor: 'rgba(0, 0, 0, 0.5)',
-                     borderRadius: '50%',
-                     display: 'flex',
-                     alignItems: 'center',
-                     justifyContent: 'center',
-                     opacity: 0,
-                     transition: 'opacity 0.3s',
-                     '&:hover': {
-                        opacity: 1
-                     }
-                  }}
-               >
-                  <Stack direction="column" alignItems="center" spacing={0.5}>
-                     <SvgIcon component={CameraIcon} sx={{ color: 'rgb(245, 245, 245)', fontSize: '2rem' }} />
-                     <Typography variant="caption" sx={{ color: 'rgb(245, 245, 245)' }}>
-                        Upload
-                     </Typography>
-                  </Stack>
-               </Box>
-               <input type="file" id="change-avatar" style={{ display: 'none' }} />
-            </Box>
+      <Grid container spacing={customization.gridSpacing}>
+         <Grid container item xs={12} md={12}>
+            <Grid container spacing={2}>
+               <Grid item xs={12} sm={4}>
+                  <SubCard title="Profile Picture">
+                     <Box
+                        sx={{
+                           display: 'flex',
+                           flexDirection: 'column',
+                           alignItems: 'center',
+                           textAlign: 'center',
+                           cursor: 'pointer'
+                        }}
+                     >
+                        <Avatar alt="Avatar 1" src={User1} sx={{ width: 80, height: 80, mb: 2 }} />
+                        <Typography variant="body2" gutterBottom>
+                           Upload/Change Your Profile Image
+                        </Typography>
+                        <Button variant="contained" color="primary" component="label">
+                           Upload Avatar
+                           <input type="file" id="change-avatar" hidden />
+                        </Button>
+                     </Box>
+                  </SubCard>
+               </Grid>
+               <Grid item xs={12} sm={8}>
+                  <SubCard title="Personal Information"> </SubCard>
+               </Grid>
+            </Grid>
          </Grid>
       </Grid>
    );
