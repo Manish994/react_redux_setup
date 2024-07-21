@@ -13,6 +13,7 @@ import Profile from './profile';
 import PersonalDetails from './personalDetails';
 import KycDetails from './kycDetails';
 import MyAccount from './myAccount';
+import Security from './security';
 
 const StepperProfile = () => {
    const [value, setValue] = useState(0);
@@ -42,7 +43,7 @@ const StepperProfile = () => {
             <Tab icon={<DescriptionTwoToneIcon />} iconPosition="start" label="Personal Details" sx={styles} />
             <Tab icon={<DescriptionTwoToneIcon />} iconPosition="start" label="KYC Details" sx={styles} />
             <Tab icon={<LibraryBooksTwoToneIcon />} iconPosition="start" label="My Account" sx={styles} />
-            <Tab icon={<LockTwoToneIcon />} iconPosition="start" label="Change Password" sx={styles} />
+            <Tab icon={<LockTwoToneIcon />} iconPosition="start" label="Security" sx={styles} />
             <Tab icon={<MailTwoToneIcon />} iconPosition="start" label="Settings" sx={styles} />
          </Tabs>
          <Divider style={{ marginBottom: '24px' }} />
@@ -51,7 +52,8 @@ const StepperProfile = () => {
             <PersonalDetails />
             <KycDetails />
             <MyAccount />
-            <div>Item Three</div>
+            <Security />
+
             <div>Item Four</div>
             <div>Item Five</div>
          </SwipeableViews>
