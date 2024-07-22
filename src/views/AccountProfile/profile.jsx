@@ -16,7 +16,10 @@ import {
    TableContainer,
    TableRow,
    Paper,
-   tableCellClasses
+   tableCellClasses,
+   Box,
+   Button,
+   LinearProgress
 } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
@@ -28,6 +31,9 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import CloseIcon from '@mui/icons-material/Close';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 // project imports
 import SubCard from 'ui-component/cards/SubCard';
@@ -53,6 +59,69 @@ const Profile = () => {
       <Grid container spacing={customization.gridSpacing}>
          <Grid container item xs={12} md={12}>
             <Grid container spacing={2}>
+               <Grid item xs={12} md={12}>
+                  <Box sx={{ p: 2, border: '1px solid #e0e0e0', borderRadius: 2 }}>
+                     <Box sx={{ display: 'flex', mb: 2 }}>
+                        <img src="https://via.placeholder.com/150" alt="Max Smith" style={{ width: 150, height: 150 }} />
+                        <Box sx={{ ml: 3 }}>
+                           <Typography variant="h3" component="div" sx={{ mb: 1 }}>
+                              Max Smith <CheckCircleIcon sx={{ color: '#4caf50', fontSize: 20 }} />
+                           </Typography>
+                           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                 <EmailIcon fontSize="small" />
+                                 <Typography variant="subtitle1" color="textSecondary">
+                                    demo@sample.com
+                                 </Typography>
+                              </Box>
+                              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                 <SmartphoneIcon fontSize="small" />
+                                 <Typography variant="subtitle1" color="textSecondary">
+                                    (+99) 9999 999 999
+                                 </Typography>
+                              </Box>
+                              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                 <LocationOnIcon fontSize="small" />
+                                 <Typography variant="subtitle1" color="textSecondary">
+                                    Melbourne
+                                 </Typography>
+                              </Box>
+                           </Box>
+                           <Box sx={{ display: 'flex', alignItems: 'center', width: '100%', gap: 6 }}>
+                              <Box sx={{ textAlign: 'center' }}>
+                                 <Typography variant="h6">$4500</Typography>
+                                 <Typography variant="body2" color="textSecondary">
+                                    Earnings
+                                 </Typography>
+                              </Box>
+                              <Box sx={{ textAlign: 'center' }}>
+                                 <Typography variant="h6">
+                                    75 <ArrowUpwardIcon sx={{ color: '#f44336', verticalAlign: 'middle' }} />
+                                 </Typography>
+                                 <Typography variant="body2" color="textSecondary">
+                                    Projects
+                                 </Typography>
+                              </Box>
+                              <Box sx={{ textAlign: 'center' }}>
+                                 <Typography variant="h6">
+                                    60% <ArrowDownwardIcon sx={{ color: '#4caf50', verticalAlign: 'middle' }} />
+                                 </Typography>
+                                 <Typography variant="body2" color="textSecondary">
+                                    Success Rate
+                                 </Typography>
+                              </Box>
+                           </Box>
+                        </Box>
+                     </Box>
+
+                     <Box sx={{ width: '100%' }}>
+                        <Typography variant="body2" color="textSecondary">
+                           Profile Completion
+                        </Typography>
+                        <LinearProgress variant="determinate" value={50} />
+                     </Box>
+                  </Box>
+               </Grid>
                <Grid item xs={12} sm={4}>
                   <SubCard
                      title={

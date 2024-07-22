@@ -63,6 +63,7 @@ export default defineConfig(({ command }) => {
          server: {
             open: true,
             port: 3000,
+            process: import.meta.env,
             strictPort: true,
             hmr: {
                clientPort: 3000, // Ensure the client connects to the correct port
