@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 // material-ui
@@ -9,6 +10,10 @@ import { selectCustomization } from '@slice/customizationSlice';
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 
 const Dashboard = () => {
+   useEffect(() => {
+      debugger;
+      const a = process.env;
+   });
    const customization = useSelector(selectCustomization);
    return (
       <Grid container spacing={customization.gridSpacing}>
