@@ -25,7 +25,7 @@ const adminHistory = [
 
 const AdminHistory = () => {
    return (
-      <SubCard title="Change Password" sx={{ marginBottom: '24px' }}>
+      <SubCard title="2024-07-21 10:00 AM" sx={{ marginBottom: '24px' }}>
          <Box>
             <List>
                {adminHistory.map((history, index) => (
@@ -38,9 +38,6 @@ const AdminHistory = () => {
                                  {history.description}
                               </Typography>
                               <br />
-                              <Typography component="span" variant="body2" color="textSecondary">
-                                 {history.timestamp}
-                              </Typography>
                            </>
                         }
                      />

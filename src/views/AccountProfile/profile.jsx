@@ -27,6 +27,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
+import CloseIcon from '@mui/icons-material/Close';
 
 // project imports
 import SubCard from 'ui-component/cards/SubCard';
@@ -52,7 +53,7 @@ const Profile = () => {
       <Grid container spacing={customization.gridSpacing}>
          <Grid container item xs={12} md={12}>
             <Grid container spacing={2}>
-               <Grid item xs={12} sm={5}>
+               <Grid item xs={12} sm={4}>
                   <SubCard
                      title={
                         <Grid container spacing={2} alignItems="center">
@@ -61,7 +62,14 @@ const Profile = () => {
                            </Grid>
                            <Grid item xs>
                               <Typography variant="subtitle1">Abinash Dhakal</Typography>
-                              <Typography variant="subtitle2">Red Hacker</Typography>
+                              <Typography variant="subtitle2" color="red">
+                                 DeActivated
+                              </Typography>
+                           </Grid>
+                           <Grid item>
+                              <IconButton size="small">
+                                 <CloseIcon sx={{ color: 'red' }} />
+                              </IconButton>
                            </Grid>
                         </Grid>
                      }
@@ -151,6 +159,7 @@ const Profile = () => {
                               src={`${itemData[0].img}?w=248&fit=crop&auto=format`}
                               alt={itemData[0].title}
                               loading="lazy"
+                              height="100px"
                            />
                            <ImageListItemBar
                               title={itemData[0].title}
@@ -184,7 +193,7 @@ const Profile = () => {
                      </ImageList>
                   </SubCard>
                </Grid>
-               <Grid item xs={12} sm={7}>
+               <Grid item xs={12} sm={7.5}>
                   <SubCard title="Personal Information" sx={{ marginBottom: '24px' }}>
                      <Grid container direction="column" spacing={1}>
                         <TableContainer component={Paper}>
@@ -193,7 +202,11 @@ const Profile = () => {
                               sx={{
                                  [`& .${tableCellClasses.root}`]: {
                                     borderBottom: 'none'
-                                 }
+                                 },
+                                 [`& .MuiTableRow-root:hover`]: {
+                                    backgroundColor: 'rgb(237, 231, 246)'
+                                 },
+                                 cursor: 'pointer'
                               }}
                            >
                               <TableBody>
@@ -281,6 +294,10 @@ const Profile = () => {
                                  [`& .${tableCellClasses.root}`]: {
                                     borderBottom: 'none'
                                  },
+                                 [`& .MuiTableRow-root:hover`]: {
+                                    backgroundColor: 'rgb(237, 231, 246)'
+                                 },
+                                 cursor: 'pointer',
                                  width: '100%'
                               }}
                            >
