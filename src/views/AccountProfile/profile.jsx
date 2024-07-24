@@ -142,6 +142,7 @@ const Profile = () => {
                         border: '1px solid #e0e0e0',
                         borderRadius: 4,
                         display: 'flex',
+                        flexDirection: isMobile ? 'column' : 'row', // Change flex direction based on view
                         alignItems: 'center',
                         width: '100%'
                      }}
@@ -181,8 +182,9 @@ const Profile = () => {
                                  <Typography variant="body2" color="textSecondary">
                                     Receiver
                                  </Typography>
+
                                  <Typography variant="h6">4500</Typography>
-                                 <Typography sx={{ fontSize: '1rem', color: 'primary' }}>AUD. 1258</Typography>
+                                 <br></br>
                                  {/* <img alt="Endowment Saving" src={propertyAndHomeImage} width={50} height={50} className="" /> */}
                               </Grid>
                            </CardContent>
@@ -241,8 +243,9 @@ const Profile = () => {
                         <Card
                            sx={{
                               width: '250px',
-                              borderLeft: '3px solid rgb(1, 100, 25)',
                               backgroundColor: 'rgb(244, 247, 249)',
+                              borderLeft: '3px solid rgb(1, 100, 25)',
+                              marginRight: '16px',
                               height: '100%',
                               transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
                               cursor: 'pointer',
