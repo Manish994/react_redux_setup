@@ -18,7 +18,7 @@ import {
    Paper,
    tableCellClasses,
    Box,
-   LinearProgress,
+   useMediaQuery,
    Card,
    CardContent
 } from '@mui/material';
@@ -33,11 +33,6 @@ import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import CloseIcon from '@mui/icons-material/Close';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-
-import Saving from 'views/AccountProfile/Endowment_Plan.webp';
-import propertyAndHomeImage from 'views/AccountProfile/Property_Home.webp';
 
 // project imports
 import SubCard from 'ui-component/cards/SubCard';
@@ -59,6 +54,7 @@ const itemData = [
 ];
 
 const Profile = () => {
+   const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
    const customization = useSelector((state) => state.customization);
    return (
       <Grid container spacing={customization.gridSpacing}>
@@ -66,44 +62,77 @@ const Profile = () => {
             <Grid container spacing={2}>
                <Grid item xs={12} md={12}>
                   <Box sx={{ p: 2, border: '1px solid #e0e0e0', borderRadius: 4 }}>
-                     <Box sx={{ display: 'flex' }}>
-                        <Box
-                           component="img"
-                           sx={{
-                              width: 100,
-                              height: 100,
-                              borderRadius: '50%',
-                              objectFit: 'cover'
-                           }}
-                           alt="Max Smith"
-                           src="https://via.placeholder.com/150"
-                        />
-                        <Box sx={{ ml: 3, mt: 2 }}>
-                           <Typography variant="h3" component="div" sx={{ mb: 1 }}>
-                              Abinash Dhakal <CheckCircleIcon sx={{ color: '#4caf50', fontSize: 20 }} />
-                           </Typography>
-                           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                                 <EmailIcon fontSize="small" />
-                                 <Typography variant="subtitle1" color="textSecondary">
-                                    demo@sample.com
-                                 </Typography>
-                              </Box>
-                              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                                 <SmartphoneIcon fontSize="small" />
-                                 <Typography variant="subtitle1" color="textSecondary">
-                                    (+99) 9999 999 999
-                                 </Typography>
-                              </Box>
-                              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                                 <LocationOnIcon fontSize="small" />
-                                 <Typography variant="subtitle1" color="textSecondary">
-                                    Melbourne
-                                 </Typography>
+                     <Grid container spacing={2} alignItems="center" justifyContent={isMobile ? 'center' : 'flex-start'}>
+                        <Grid item xs={12} sm={1.3} sx={{ display: 'flex', justifyContent: isMobile ? 'center' : 'flex-start' }}>
+                           <Box
+                              component="img"
+                              sx={{
+                                 width: isMobile ? '50%' : 100,
+                                 height: 100,
+                                 borderRadius: '50%',
+                                 objectFit: 'cover'
+                              }}
+                              alt="Max Smith"
+                              src="https://via.placeholder.com/150"
+                           />
+                        </Grid>
+                        <Grid item xs={12} sm={8}>
+                           <Box sx={{ textAlign: isMobile ? 'center' : 'left' }}>
+                              <Typography variant="h3" component="div" sx={{ mb: 1 }}>
+                                 Abinash Dhakal <CheckCircleIcon sx={{ color: '#4caf50', fontSize: 20 }} />
+                              </Typography>
+                              <Box
+                                 sx={{
+                                    display: 'flex',
+                                    flexDirection: isMobile ? 'column' : 'row',
+                                    gap: 1,
+                                    alignItems: isMobile ? 'center' : 'center',
+                                    justifyContent: isMobile ? 'center' : 'flex-start'
+                                 }}
+                              >
+                                 <Box
+                                    sx={{
+                                       display: 'flex',
+                                       alignItems: 'center',
+                                       gap: 1,
+                                       justifyContent: isMobile ? 'center' : 'flex-start'
+                                    }}
+                                 >
+                                    <EmailIcon fontSize="small" />
+                                    <Typography variant="subtitle1" color="textSecondary">
+                                       demo@sample.com
+                                    </Typography>
+                                 </Box>
+                                 <Box
+                                    sx={{
+                                       display: 'flex',
+                                       alignItems: 'center',
+                                       gap: 1,
+                                       justifyContent: isMobile ? 'center' : 'flex-start'
+                                    }}
+                                 >
+                                    <SmartphoneIcon fontSize="small" />
+                                    <Typography variant="subtitle1" color="textSecondary">
+                                       (+99) 9999 999 999
+                                    </Typography>
+                                 </Box>
+                                 <Box
+                                    sx={{
+                                       display: 'flex',
+                                       alignItems: 'center',
+                                       gap: 1,
+                                       justifyContent: isMobile ? 'center' : 'flex-start'
+                                    }}
+                                 >
+                                    <LocationOnIcon fontSize="small" />
+                                    <Typography variant="subtitle1" color="textSecondary">
+                                       Melbourne
+                                    </Typography>
+                                 </Box>
                               </Box>
                            </Box>
-                        </Box>
-                     </Box>
+                        </Grid>
+                     </Grid>
                   </Box>
                </Grid>
                <Grid item xs={12} md={12}>
