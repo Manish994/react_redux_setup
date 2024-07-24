@@ -44,7 +44,7 @@ const KycDetails = () => {
                               />
                            </FormControl>
                         </Grid>
-                        <Grid item xs={12} sm={4} md={6}>
+                        <Grid item xs={12} sm={6} md={6}>
                            <FormControl fullWidth>
                               <TextField
                                  fullWidth
@@ -108,7 +108,7 @@ const KycDetails = () => {
                               />
                            </FormControl>
                         </Grid>
-                        <Grid item xs={12} sm={4} md={6}>
+                        <Grid item xs={12} sm={6} md={6}>
                            <FormControl fullWidth>
                               <TextField
                                  fullWidth
@@ -137,7 +137,7 @@ const KycDetails = () => {
                      </Grid>
 
                      <Grid container spacing={2}>
-                        <Grid item xs={12} sm={4} md={6}>
+                        <Grid item xs={12} sm={6} md={6}>
                            <FormControl fullWidth>
                               <TextField
                                  fullWidth
@@ -150,7 +150,7 @@ const KycDetails = () => {
                               />
                            </FormControl>
                         </Grid>
-                        <Grid item xs={12} sm={4} md={6}>
+                        <Grid item xs={12} sm={6} md={6}>
                            <FormControl fullWidth>
                               <TextField
                                  fullWidth
@@ -174,7 +174,7 @@ const KycDetails = () => {
                               />
                            </FormControl>
                         </Grid>
-                        <Grid item xs={12} sm={4} md={6}>
+                        <Grid item xs={12} sm={6} md={6}>
                            <FormControl fullWidth>
                               <TextField
                                  fullWidth
@@ -189,7 +189,7 @@ const KycDetails = () => {
                         </Grid>
                      </Grid>
                      <Grid container spacing={2}>
-                        <Grid item xs={12} sm={4} md={6}>
+                        <Grid item xs={12} sm={6} md={6}>
                            <FormControl fullWidth>
                               <TextField
                                  fullWidth
