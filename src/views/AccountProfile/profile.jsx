@@ -56,7 +56,7 @@ const Profile = () => {
                <Grid item xs={12} md={12}>
                   <Box sx={{ p: 2, border: '1px solid #e0e0e0', borderRadius: 4 }}>
                      <Grid container spacing={2} alignItems="center" justifyContent={isMobile ? 'center' : 'flex-start'}>
-                        <Grid item xs={12} sm={1} sx={{ display: 'flex', justifyContent: isMobile ? 'center' : 'flex-start' }}>
+                        <Grid item xs={12} sm={2} md={1.2} sx={{ display: 'flex', justifyContent: isMobile ? 'center' : 'flex-start' }}>
                            <Box
                               component="img"
                               sx={{
@@ -69,7 +69,7 @@ const Profile = () => {
                               src="https://via.placeholder.com/150"
                            />
                         </Grid>
-                        <Grid item xs={12} sm={4}>
+                        <Grid item xs={12} sm={8}>
                            <Box sx={{ textAlign: isMobile ? 'center' : 'left' }}>
                               <Typography variant="h3" component="div" sx={{ mb: 1 }}>
                                  Abinash Dhakal <CheckCircleIcon sx={{ color: '#4caf50', fontSize: 20 }} />
@@ -88,12 +88,13 @@ const Profile = () => {
                                        display: 'flex',
                                        alignItems: 'center',
                                        gap: 1,
-                                       justifyContent: isMobile ? 'center' : 'flex-start'
+                                       justifyContent: isMobile ? 'center' : 'flex-start',
+                                       whiteSpace: 'nowrap'
                                     }}
                                  >
                                     <EmailIcon fontSize="small" />
                                     <Typography variant="subtitle1" color="textSecondary">
-                                       demo@sample.com
+                                       bikashjhendi@sample.com
                                     </Typography>
                                  </Box>
                                  <Box
@@ -106,7 +107,7 @@ const Profile = () => {
                                  >
                                     <SmartphoneIcon fontSize="small" />
                                     <Typography variant="subtitle1" color="textSecondary">
-                                       (+99) 9999 999 999
+                                       123456789012
                                     </Typography>
                                  </Box>
                                  <Box
@@ -135,262 +136,275 @@ const Profile = () => {
                         border: '1px solid #e0e0e0',
                         borderRadius: 4,
                         display: 'flex',
-                        flexDirection: isMobile ? 'column' : 'row', // Change flex direction based on view
+                        flexDirection: isMobile ? 'row' : 'row', // Change flex direction based on view
                         alignItems: 'center',
-                        width: '100%'
+                        width: '100%',
+                        overflow: 'auto',
+                        whiteSpace: 'nowrap'
                      }}
                   >
-                     <Box
-                        sx={{
-                           overflow: 'auto',
-                           padding: '10px',
-                           display: 'flex'
-                        }}
-                     >
-                        <Card
+                     <Grid item xs={6} sm={3} md={2}>
+                        <Box
                            sx={{
-                              width: '250px',
-                              backgroundColor: 'rgb(244, 247, 249)',
-                              borderLeft: '3px solid rgb(1, 100, 25)',
-                              marginRight: '16px',
-                              height: '100%',
-                              transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
-                              cursor: 'pointer',
-                              '&:hover': {
-                                 transform: 'scale(1.05)'
-                              }
+                              overflow: 'auto',
+                              padding: '10px',
+                              display: 'flex'
                            }}
                         >
-                           <CardContent>
-                              <Grid
-                                 container
-                                 sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    height: '100%'
-                                 }}
-                              >
-                                 <Typography variant="body2" color="textSecondary">
-                                    Receiver
-                                 </Typography>
+                           <Card
+                              sx={{
+                                 width: '250px',
+                                 backgroundColor: 'rgb(244, 247, 249)',
+                                 borderLeft: '3px solid rgb(1, 100, 25)',
+                                 marginRight: '16px',
+                                 height: '100%',
+                                 transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
+                                 cursor: 'pointer',
+                                 '&:hover': {
+                                    transform: 'scale(1.05)'
+                                 }
+                              }}
+                           >
+                              <CardContent>
+                                 <Grid
+                                    container
+                                    sx={{
+                                       display: 'flex',
+                                       flexDirection: 'column',
+                                       alignItems: 'center',
+                                       justifyContent: 'center',
+                                       height: '100%'
+                                    }}
+                                 >
+                                    <Typography variant="body2" color="textSecondary">
+                                       Receiver
+                                    </Typography>
 
-                                 <Typography variant="h6">4500</Typography>
-                                 <br></br>
-                                 {/* <img alt="Endowment Saving" src={propertyAndHomeImage} width={50} height={50} className="" /> */}
-                              </Grid>
-                           </CardContent>
-                        </Card>
-                     </Box>
-
-                     <Box
-                        sx={{
-                           overflow: 'auto',
-                           padding: '12px',
-                           display: 'flex'
-                        }}
-                     >
-                        <Card
+                                    <Typography variant="h6">4500</Typography>
+                                    <br></br>
+                                    {/* <img alt="Endowment Saving" src={propertyAndHomeImage} width={50} height={50} className="" /> */}
+                                 </Grid>
+                              </CardContent>
+                           </Card>
+                        </Box>
+                     </Grid>
+                     <Grid item xs={8} sm={4} md={2}>
+                        <Box
                            sx={{
-                              width: '250px',
-                              backgroundColor: 'rgb(244, 247, 249)',
-                              borderLeft: '3px solid rgb(1, 100, 25)',
-                              marginRight: '16px',
-                              height: '100%',
-                              transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
-                              cursor: 'pointer',
-                              '&:hover': {
-                                 transform: 'scale(1.05)'
-                              }
+                              overflow: 'auto',
+                              padding: '12px',
+                              display: 'flex'
                            }}
                         >
-                           <CardContent>
-                              <Grid
-                                 container
-                                 sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    height: '100%'
-                                 }}
-                              >
-                                 <Typography variant="body2" color="textSecondary">
-                                    Txn Initiated
-                                 </Typography>
-                                 <Typography variant="h6">4500</Typography>
-                                 <Typography sx={{ fontSize: '1rem', color: 'primary' }}>AUD. 1258</Typography>
-                                 {/* <img alt="Endowment Saving" src={propertyAndHomeImage} width={50} height={50} className="" /> */}
-                              </Grid>
-                           </CardContent>
-                        </Card>
-                     </Box>
-                     <Box
-                        sx={{
-                           overflow: 'auto',
-                           padding: '12px',
-                           display: 'flex'
-                        }}
-                     >
-                        <Card
+                           <Card
+                              sx={{
+                                 width: '250px',
+                                 backgroundColor: 'rgb(244, 247, 249)',
+                                 borderLeft: '3px solid rgb(1, 100, 25)',
+                                 marginRight: '16px',
+                                 height: '100%',
+                                 transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
+                                 cursor: 'pointer',
+                                 '&:hover': {
+                                    transform: 'scale(1.05)'
+                                 }
+                              }}
+                           >
+                              <CardContent>
+                                 <Grid
+                                    container
+                                    sx={{
+                                       display: 'flex',
+                                       flexDirection: 'column',
+                                       alignItems: 'center',
+                                       justifyContent: 'center',
+                                       height: '100%'
+                                    }}
+                                 >
+                                    <Typography variant="body2" color="textSecondary">
+                                       Txn Initiated
+                                    </Typography>
+                                    <Typography variant="h6">4500</Typography>
+                                    <Typography sx={{ fontSize: '1rem', color: 'primary' }}>AUD. 1258</Typography>
+                                    {/* <img alt="Endowment Saving" src={propertyAndHomeImage} width={50} height={50} className="" /> */}
+                                 </Grid>
+                              </CardContent>
+                           </Card>
+                        </Box>
+                     </Grid>
+                     <Grid item xs={8} sm={3} md={2}>
+                        <Box
                            sx={{
-                              width: '250px',
-                              backgroundColor: 'rgb(244, 247, 249)',
-                              borderLeft: '3px solid rgb(1, 100, 25)',
-                              marginRight: '16px',
-                              height: '100%',
-                              transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
-                              cursor: 'pointer',
-                              '&:hover': {
-                                 transform: 'scale(1.05)'
-                              }
+                              overflow: 'auto',
+                              padding: '12px',
+                              display: 'flex'
                            }}
                         >
-                           <CardContent>
-                              <Grid
-                                 container
-                                 sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    height: '100%'
-                                 }}
-                              >
-                                 <Typography variant="body2" color="textSecondary">
-                                    Txn Paid
-                                 </Typography>
-                                 <Typography variant="h6">4500</Typography>
-                                 <Typography sx={{ fontSize: '1rem', color: 'primary' }}>AUD. 1258</Typography>
-                                 {/* <img alt="Endowment Saving" src={propertyAndHomeImage} width={50} height={50} className="" /> */}
-                              </Grid>
-                           </CardContent>
-                        </Card>
-                     </Box>
-                     <Box
-                        sx={{
-                           overflow: 'auto',
-                           padding: '12px',
-                           display: 'flex'
-                        }}
-                     >
-                        <Card
+                           <Card
+                              sx={{
+                                 width: '250px',
+                                 backgroundColor: 'rgb(244, 247, 249)',
+                                 borderLeft: '3px solid rgb(1, 100, 25)',
+                                 marginRight: '16px',
+                                 height: '100%',
+                                 transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
+                                 cursor: 'pointer',
+                                 '&:hover': {
+                                    transform: 'scale(1.05)'
+                                 }
+                              }}
+                           >
+                              <CardContent>
+                                 <Grid
+                                    container
+                                    sx={{
+                                       display: 'flex',
+                                       flexDirection: 'column',
+                                       alignItems: 'center',
+                                       justifyContent: 'center',
+                                       height: '100%'
+                                    }}
+                                 >
+                                    <Typography variant="body2" color="textSecondary">
+                                       Txn Paid
+                                    </Typography>
+                                    <Typography variant="h6">4500</Typography>
+                                    <Typography sx={{ fontSize: '1rem', color: 'primary' }}>AUD. 1258</Typography>
+                                    {/* <img alt="Endowment Saving" src={propertyAndHomeImage} width={50} height={50} className="" /> */}
+                                 </Grid>
+                              </CardContent>
+                           </Card>
+                        </Box>
+                     </Grid>
+                     <Grid item xs={8} sm={3} md={2}>
+                        <Box
                            sx={{
-                              width: '250px',
-                              borderLeft: '3px solid rgb(1, 100, 25)',
-                              backgroundColor: 'rgb(244, 247, 249)',
-                              marginRight: '16px',
-                              height: '100%',
-                              transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
-                              cursor: 'pointer',
-                              '&:hover': {
-                                 transform: 'scale(1.05)'
-                              }
+                              overflow: 'auto',
+                              padding: '12px',
+                              display: 'flex'
                            }}
                         >
-                           <CardContent>
-                              <Grid
-                                 container
-                                 sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    height: '100%'
-                                 }}
-                              >
-                                 <Typography variant="body2" color="textSecondary">
-                                    Txn Failed
-                                 </Typography>
-                                 <Typography variant="h6">4500</Typography>
-                                 <Typography sx={{ fontSize: '1rem', color: 'primary' }}>AUD. 1258</Typography>
-                              </Grid>
-                           </CardContent>
-                        </Card>
-                     </Box>
-                     <Box
-                        sx={{
-                           overflow: 'auto',
-                           padding: '10px',
-                           display: 'flex'
-                        }}
-                     >
-                        <Card
+                           <Card
+                              sx={{
+                                 width: '250px',
+                                 borderLeft: '3px solid rgb(1, 100, 25)',
+                                 backgroundColor: 'rgb(244, 247, 249)',
+                                 marginRight: '16px',
+                                 height: '100%',
+                                 transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
+                                 cursor: 'pointer',
+                                 '&:hover': {
+                                    transform: 'scale(1.05)'
+                                 }
+                              }}
+                           >
+                              <CardContent>
+                                 <Grid
+                                    container
+                                    sx={{
+                                       display: 'flex',
+                                       flexDirection: 'column',
+                                       alignItems: 'center',
+                                       justifyContent: 'center',
+                                       height: '100%'
+                                    }}
+                                 >
+                                    <Typography variant="body2" color="textSecondary">
+                                       Txn Failed
+                                    </Typography>
+                                    <Typography variant="h6">4500</Typography>
+                                    <Typography sx={{ fontSize: '1rem', color: 'primary' }}>AUD. 1258</Typography>
+                                 </Grid>
+                              </CardContent>
+                           </Card>
+                        </Box>
+                     </Grid>
+                     <Grid item xs={8} sm={4} md={2}>
+                        <Box
                            sx={{
-                              width: '250px',
-                              backgroundColor: 'rgb(244, 247, 249)',
-                              borderLeft: '3px solid rgb(1, 100, 25)',
-                              marginRight: '16px',
-                              height: '100%',
-                              transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
-                              cursor: 'pointer',
-                              '&:hover': {
-                                 transform: 'scale(1.05)'
-                              }
+                              overflow: 'auto',
+                              padding: '10px',
+                              display: 'flex'
                            }}
                         >
-                           <CardContent>
-                              <Grid
-                                 container
-                                 sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    height: '100%'
-                                 }}
-                              >
-                                 <Typography variant="body2" color="textSecondary">
-                                    Txn Cancelled
-                                 </Typography>
-                                 <Typography variant="h6">4500</Typography>
-                                 <Typography sx={{ fontSize: '1rem', color: 'primary' }}>AUD. 1258</Typography>
-                              </Grid>
-                           </CardContent>
-                        </Card>
-                     </Box>
-                     <Box
-                        sx={{
-                           overflow: 'auto',
-                           padding: '10px',
-                           display: 'flex'
-                        }}
-                     >
-                        <Card
+                           <Card
+                              sx={{
+                                 width: '250px',
+                                 backgroundColor: 'rgb(244, 247, 249)',
+                                 borderLeft: '3px solid rgb(1, 100, 25)',
+                                 marginRight: '16px',
+                                 height: '100%',
+                                 transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
+                                 cursor: 'pointer',
+                                 '&:hover': {
+                                    transform: 'scale(1.05)'
+                                 }
+                              }}
+                           >
+                              <CardContent>
+                                 <Grid
+                                    container
+                                    sx={{
+                                       display: 'flex',
+                                       flexDirection: 'column',
+                                       alignItems: 'center',
+                                       justifyContent: 'center',
+                                       height: '100%'
+                                    }}
+                                 >
+                                    <Typography variant="body2" color="textSecondary">
+                                       Txn Cancelled
+                                    </Typography>
+                                    <Typography variant="h6">4500</Typography>
+                                    <Typography sx={{ fontSize: '1rem', color: 'primary' }}>AUD. 1258</Typography>
+                                 </Grid>
+                              </CardContent>
+                           </Card>
+                        </Box>
+                     </Grid>
+                     <Grid item xs={8} sm={3} md={2}>
+                        <Box
                            sx={{
-                              width: '250px',
-                              backgroundColor: 'rgb(244, 247, 249)',
-                              borderLeft: '3px solid rgb(1, 100, 25)',
-                              marginRight: '16px',
-                              height: '100%',
-                              transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
-                              cursor: 'pointer',
-                              '&:hover': {
-                                 transform: 'scale(1.05)'
-                              }
+                              overflow: 'auto',
+                              padding: '10px',
+                              display: 'flex'
                            }}
                         >
-                           <CardContent>
-                              <Grid
-                                 container
-                                 sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    height: '100%'
-                                 }}
-                              >
-                                 <Typography variant="body2" color="textSecondary">
-                                    Compliance
-                                 </Typography>
-                                 <Typography variant="h6">4500</Typography>
-                                 <Typography sx={{ fontSize: '1rem', color: 'primary' }}>AUD. 1258</Typography>
-                              </Grid>
-                           </CardContent>
-                        </Card>
-                     </Box>
+                           <Card
+                              sx={{
+                                 width: '250px',
+                                 backgroundColor: 'rgb(244, 247, 249)',
+                                 borderLeft: '3px solid rgb(1, 100, 25)',
+                                 marginRight: '16px',
+                                 height: '100%',
+                                 transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
+                                 cursor: 'pointer',
+                                 '&:hover': {
+                                    transform: 'scale(1.05)'
+                                 }
+                              }}
+                           >
+                              <CardContent>
+                                 <Grid
+                                    container
+                                    sx={{
+                                       display: 'flex',
+                                       flexDirection: 'column',
+                                       alignItems: 'center',
+                                       justifyContent: 'center',
+                                       height: '100%'
+                                    }}
+                                 >
+                                    <Typography variant="body2" color="textSecondary">
+                                       Compliance
+                                    </Typography>
+                                    <Typography variant="h6">4500</Typography>
+                                    <Typography sx={{ fontSize: '1rem', color: 'primary' }}>AUD. 1258</Typography>
+                                 </Grid>
+                              </CardContent>
+                           </Card>
+                        </Box>
+                     </Grid>
                   </Box>
                </Grid>
 
@@ -599,7 +613,7 @@ const Profile = () => {
                   </SubCard>
                </Grid>
                <Grid item xs={12} md={12}>
-                  <SubCard title="KYC Image">
+                  <SubCard title="KYC Image" sx={{ overflow: 'auto', whiteSpace: 'nowrap' }}>
                      <ImageList sx={{ display: 'flex', flexDirection: 'row', overflow: 'auto' }}>
                         <ImageListItem key={itemData[0].img} sx={{ flex: '0 0 auto', marginRight: 2 }}>
                            <img

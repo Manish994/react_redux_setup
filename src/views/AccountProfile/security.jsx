@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { Grid, FormControl, TextField, Box, Typography, FormControlLabel, Switch, Button } from '@mui/material';
+import { Grid, FormControl, TextField, Box, Typography, Button } from '@mui/material';
 
 // project imports
 import SubCard from 'ui-component/cards/SubCard';
@@ -50,31 +50,39 @@ const Security = () => {
                   </Grid>
                </SubCard>
             </Grid>
-            <Grid item xs={12} sm={12}>
-               <SubCard title="Advance Settings">
-                  <Box p={2}>
-                     <Typography variant="h6" gutterBottom>
-                        De-Activated Account
-                     </Typography>
-                     <FormControlLabel control={<Switch />} label="Browsing Securely (https) when it's necessary" />
-                     <br></br>
-                     <br></br>
-                     <Typography variant="h6" gutterBottom>
-                        Change KYC Status
-                     </Typography>
-                     <FormControlLabel control={<Switch />} label="Notify when login attempted from other place" />
-                     <br></br>
-                     <br></br>
-
-                     <Typography variant="h6" gutterBottom>
-                        LOGIN APPROVALS
-                     </Typography>
-                     <FormControlLabel
-                        control={<Switch defaultChecked />}
-                        label="Approvals is not required when login from unrecognized devices."
-                     />
-                  </Box>
-               </SubCard>
+            <Grid item xs={12} md={12}>
+               <Grid container spacing={2}>
+                  <Grid item xs={12} sm={12} md={6}>
+                     <Box p={2}>
+                        <Box>
+                           <Typography variant="body" gutterBottom>
+                              To deactivate your account, first delete its resources. If you are the only owner of any teams, either assign
+                              another owner or deactivate the team.
+                           </Typography>
+                        </Box>
+                        <Box sx={{ mt: 2 }}>
+                           <Button variant="outlined" color="error" component="label">
+                              Deactivate Account
+                           </Button>
+                        </Box>
+                     </Box>
+                  </Grid>
+                  <Grid item xs={12} sm={12} md={6}>
+                     <Box p={2}>
+                        <Box>
+                           <Typography variant="body" gutterBottom>
+                              To deactivate your account, first delete its resources. If you are the only owner of any teams, either assign
+                              another owner or deactivate the team.
+                           </Typography>
+                        </Box>
+                        <Box sx={{ mt: 2 }}>
+                           <Button variant="outlined" color="error" component="label">
+                              Deactivate Account
+                           </Button>
+                        </Box>
+                     </Box>
+                  </Grid>
+               </Grid>
             </Grid>
          </Grid>
       </Grid>
