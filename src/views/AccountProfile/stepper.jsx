@@ -30,7 +30,7 @@ const StepperProfile = () => {
    const styles = { color: 'rgb(54,65,82)', fontSize: '0.875rem', fontWeight: '500', lineHeight: '1.25', textTransform: 'capitalize' };
 
    return (
-      <MainCard>
+      <MainCard sx={{ backgroundColor: 'rgb(244, 247, 249)' }}>
          <Card>
             <Tabs
                value={value}

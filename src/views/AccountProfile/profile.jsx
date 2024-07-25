@@ -54,7 +54,7 @@ const Profile = () => {
          <Grid container item xs={12} md={12}>
             <Grid container spacing={2}>
                <Grid item xs={12} md={12}>
-                  <Box sx={{ p: 2, border: '1px solid #e0e0e0', borderRadius: 4 }}>
+                  <Card sx={{ p: 2, border: '1px solid #e0e0e0', borderRadius: 4 }}>
                      <Grid container spacing={2} alignItems="center" justifyContent={isMobile ? 'center' : 'flex-start'}>
                         <Grid item xs={12} sm={2} md={1.2} sx={{ display: 'flex', justifyContent: isMobile ? 'center' : 'flex-start' }}>
                            <Box
@@ -71,7 +71,7 @@ const Profile = () => {
                         </Grid>
                         <Grid item xs={12} sm={8}>
                            <Box sx={{ textAlign: isMobile ? 'center' : 'left' }}>
-                              <Typography variant="h3" component="div" sx={{ mb: 1 }}>
+                              <Typography variant="h3" component="div" sx={{ mb: 1, color: 'rgb(36, 143, 206)' }}>
                                  Abinash Dhakal <CheckCircleIcon sx={{ color: '#4caf50', fontSize: 20 }} />
                               </Typography>
                               <Box
@@ -127,14 +127,13 @@ const Profile = () => {
                            </Box>
                         </Grid>
                      </Grid>
-                  </Box>
+                  </Card>
                </Grid>
                <Grid item xs={12} md={12}>
                   <Box
                      sx={{
                         pl: 2,
-                        border: '1px solid #e0e0e0',
-                        borderRadius: 4,
+
                         display: 'flex',
                         flexDirection: isMobile ? 'row' : 'row', // Change flex direction based on view
                         alignItems: 'center',
@@ -154,7 +153,7 @@ const Profile = () => {
                            <Card
                               sx={{
                                  width: '250px',
-                                 boxShadow: '5',
+                                 boxShadow: '1',
                                  borderLeft: '3px solid rgb(1, 100, 25)',
                                  marginRight: '16px',
                                  height: '100%',
@@ -162,9 +161,7 @@ const Profile = () => {
                                  cursor: 'pointer',
                                  '&:hover': {
                                     transform: 'scale(1.05)'
-                                 },
-                                 bgcolor: 'primary.light',
-                                 color: 'grey.800'
+                                 }
                               }}
                            >
                               <CardContent>
@@ -201,7 +198,7 @@ const Profile = () => {
                            <Card
                               sx={{
                                  width: '250px',
-                                 boxShadow: '5',
+                                 boxShadow: '1',
 
                                  borderLeft: '3px solid rgb(1, 100, 25)',
                                  marginRight: '16px',
@@ -210,9 +207,7 @@ const Profile = () => {
                                  cursor: 'pointer',
                                  '&:hover': {
                                     transform: 'scale(1.05)'
-                                 },
-                                 bgcolor: 'primary.light',
-                                 color: 'grey.800'
+                                 }
                               }}
                            >
                               <CardContent>
@@ -248,7 +243,7 @@ const Profile = () => {
                            <Card
                               sx={{
                                  width: '250px',
-                                 boxShadow: '5',
+                                 boxShadow: '1',
 
                                  borderLeft: '3px solid rgb(1, 100, 25)',
                                  marginRight: '16px',
@@ -257,9 +252,7 @@ const Profile = () => {
                                  cursor: 'pointer',
                                  '&:hover': {
                                     transform: 'scale(1.05)'
-                                 },
-                                 bgcolor: 'primary.light',
-                                 color: 'grey.800'
+                                 }
                               }}
                            >
                               <CardContent>
@@ -295,7 +288,7 @@ const Profile = () => {
                            <Card
                               sx={{
                                  width: '250px',
-                                 boxShadow: '5',
+                                 boxShadow: '1',
                                  borderLeft: '3px solid rgb(1, 100, 25)',
 
                                  marginRight: '16px',
@@ -304,9 +297,7 @@ const Profile = () => {
                                  cursor: 'pointer',
                                  '&:hover': {
                                     transform: 'scale(1.05)'
-                                 },
-                                 bgcolor: 'primary.light',
-                                 color: 'grey.800'
+                                 }
                               }}
                            >
                               <CardContent>
@@ -341,7 +332,7 @@ const Profile = () => {
                            <Card
                               sx={{
                                  width: '250px',
-                                 boxShadow: '5',
+                                 boxShadow: '1',
 
                                  borderLeft: '3px solid rgb(1, 100, 25)',
                                  marginRight: '16px',
@@ -350,9 +341,7 @@ const Profile = () => {
                                  cursor: 'pointer',
                                  '&:hover': {
                                     transform: 'scale(1.05)'
-                                 },
-                                 bgcolor: 'primary.light',
-                                 color: 'grey.800'
+                                 }
                               }}
                            >
                               <CardContent>
@@ -387,7 +376,7 @@ const Profile = () => {
                            <Card
                               sx={{
                                  width: '250px',
-                                 boxShadow: '5',
+                                 boxShadow: '1',
 
                                  borderLeft: '3px solid rgb(1, 100, 25)',
                                  marginRight: '16px',
@@ -396,9 +385,7 @@ const Profile = () => {
                                  cursor: 'pointer',
                                  '&:hover': {
                                     transform: 'scale(1.05)'
-                                 },
-                                 bgcolor: 'primary.light',
-                                 color: 'grey.800'
+                                 }
                               }}
                            >
                               <CardContent>
