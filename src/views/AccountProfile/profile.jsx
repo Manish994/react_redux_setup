@@ -132,8 +132,6 @@ const Profile = () => {
                <Grid item xs={12} md={12}>
                   <Box
                      sx={{
-                        pl: 2,
-
                         display: 'flex',
                         flexDirection: isMobile ? 'row' : 'row', // Change flex direction based on view
                         alignItems: 'center',
@@ -142,7 +140,7 @@ const Profile = () => {
                         whiteSpace: 'nowrap'
                      }}
                   >
-                     <Grid item xs={6} sm={3} md={2}>
+                     <Grid item xs={10} sm={5} md={3}>
                         <Box
                            sx={{
                               overflow: 'auto',
@@ -155,7 +153,6 @@ const Profile = () => {
                                  width: '250px',
                                  boxShadow: '1',
                                  borderLeft: '3px solid rgb(1, 100, 25)',
-                                 marginRight: '16px',
                                  height: '100%',
                                  transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
                                  cursor: 'pointer',
@@ -169,17 +166,18 @@ const Profile = () => {
                                     container
                                     sx={{
                                        display: 'flex',
-                                       flexDirection: 'column',
-                                       alignItems: 'center',
-                                       justifyContent: 'center',
-                                       height: '100%'
+                                       flexDirection: 'row',
+                                       justifyContent: 'space-between',
+                                       height: '100%',
+                                       mb: 1
                                     }}
                                  >
                                     <Typography variant="body2" color="textSecondary">
                                        Receiver
                                     </Typography>
-
                                     <Typography variant="h6">4500</Typography>
+                                 </Grid>
+                                 <Grid>
                                     <br></br>
                                     {/* <img alt="Endowment Saving" src={propertyAndHomeImage} width={50} height={50} className="" /> */}
                                  </Grid>
@@ -187,11 +185,11 @@ const Profile = () => {
                            </Card>
                         </Box>
                      </Grid>
-                     <Grid item xs={8} sm={4} md={2}>
+                     <Grid item xs={10} sm={5} md={3}>
                         <Box
                            sx={{
                               overflow: 'auto',
-                              padding: '12px',
+                              padding: '10px',
                               display: 'flex'
                            }}
                         >
@@ -199,9 +197,7 @@ const Profile = () => {
                               sx={{
                                  width: '250px',
                                  boxShadow: '1',
-
                                  borderLeft: '3px solid rgb(1, 100, 25)',
-                                 marginRight: '16px',
                                  height: '100%',
                                  transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
                                  cursor: 'pointer',
@@ -215,28 +211,30 @@ const Profile = () => {
                                     container
                                     sx={{
                                        display: 'flex',
-                                       flexDirection: 'column',
-                                       alignItems: 'center',
-                                       justifyContent: 'center',
-                                       height: '100%'
+                                       flexDirection: 'row',
+                                       justifyContent: 'space-between',
+                                       height: '100%',
+                                       mb: 1
                                     }}
                                  >
                                     <Typography variant="body2" color="textSecondary">
                                        Txn Initiated
                                     </Typography>
                                     <Typography variant="h6">4500</Typography>
-                                    <Typography sx={{ fontSize: '1rem', color: 'primary' }}>AUD. 1258</Typography>
+                                 </Grid>
+                                 <Grid>
+                                    <Typography sx={{ fontSize: '1rem', color: 'rgb(2, 202, 52)' }}>AUD. 1258</Typography>
                                     {/* <img alt="Endowment Saving" src={propertyAndHomeImage} width={50} height={50} className="" /> */}
                                  </Grid>
                               </CardContent>
                            </Card>
                         </Box>
                      </Grid>
-                     <Grid item xs={8} sm={3} md={2}>
+                     <Grid item xs={10} sm={5} md={3}>
                         <Box
                            sx={{
                               overflow: 'auto',
-                              padding: '12px',
+                              padding: '10px',
                               display: 'flex'
                            }}
                         >
@@ -244,9 +242,7 @@ const Profile = () => {
                               sx={{
                                  width: '250px',
                                  boxShadow: '1',
-
                                  borderLeft: '3px solid rgb(1, 100, 25)',
-                                 marginRight: '16px',
                                  height: '100%',
                                  transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
                                  cursor: 'pointer',
@@ -260,28 +256,30 @@ const Profile = () => {
                                     container
                                     sx={{
                                        display: 'flex',
-                                       flexDirection: 'column',
-                                       alignItems: 'center',
-                                       justifyContent: 'center',
-                                       height: '100%'
+                                       flexDirection: 'row',
+                                       justifyContent: 'space-between',
+                                       height: '100%',
+                                       mb: 1
                                     }}
                                  >
                                     <Typography variant="body2" color="textSecondary">
                                        Txn Paid
                                     </Typography>
                                     <Typography variant="h6">4500</Typography>
-                                    <Typography sx={{ fontSize: '1rem', color: 'primary' }}>AUD. 1258</Typography>
+                                 </Grid>
+                                 <Grid>
+                                    <Typography sx={{ fontSize: '1rem', color: 'rgb(2, 202, 52)' }}>AUD. 1258</Typography>
                                     {/* <img alt="Endowment Saving" src={propertyAndHomeImage} width={50} height={50} className="" /> */}
                                  </Grid>
                               </CardContent>
                            </Card>
                         </Box>
                      </Grid>
-                     <Grid item xs={8} sm={3} md={2}>
+                     <Grid item xs={10} sm={5} md={3}>
                         <Box
                            sx={{
                               overflow: 'auto',
-                              padding: '12px',
+                              padding: '10px',
                               display: 'flex'
                            }}
                         >
@@ -290,8 +288,6 @@ const Profile = () => {
                                  width: '250px',
                                  boxShadow: '1',
                                  borderLeft: '3px solid rgb(1, 100, 25)',
-
-                                 marginRight: '16px',
                                  height: '100%',
                                  transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
                                  cursor: 'pointer',
@@ -305,37 +301,38 @@ const Profile = () => {
                                     container
                                     sx={{
                                        display: 'flex',
-                                       flexDirection: 'column',
-                                       alignItems: 'center',
-                                       justifyContent: 'center',
-                                       height: '100%'
+                                       flexDirection: 'row',
+                                       justifyContent: 'space-between',
+                                       height: '100%',
+                                       mb: 1
                                     }}
                                  >
                                     <Typography variant="body2" color="textSecondary">
                                        Txn Failed
                                     </Typography>
                                     <Typography variant="h6">4500</Typography>
-                                    <Typography sx={{ fontSize: '1rem', color: 'primary' }}>AUD. 1258</Typography>
+                                 </Grid>
+                                 <Grid>
+                                    <Typography sx={{ fontSize: '1rem', color: 'rgb(2, 202, 52)' }}>AUD. 1258</Typography>
                                  </Grid>
                               </CardContent>
                            </Card>
                         </Box>
                      </Grid>
-                     <Grid item xs={8} sm={4} md={2}>
+                     <Grid item xs={10} sm={5} md={3}>
                         <Box
                            sx={{
                               overflow: 'auto',
                               padding: '10px',
-                              display: 'flex'
+                              display: 'flex',
+                              mb: 1
                            }}
                         >
                            <Card
                               sx={{
                                  width: '250px',
                                  boxShadow: '1',
-
                                  borderLeft: '3px solid rgb(1, 100, 25)',
-                                 marginRight: '16px',
                                  height: '100%',
                                  transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
                                  cursor: 'pointer',
@@ -349,23 +346,25 @@ const Profile = () => {
                                     container
                                     sx={{
                                        display: 'flex',
-                                       flexDirection: 'column',
-                                       alignItems: 'center',
-                                       justifyContent: 'center',
-                                       height: '100%'
+                                       flexDirection: 'row',
+                                       justifyContent: 'space-between',
+                                       height: '100%',
+                                       mb: 1
                                     }}
                                  >
                                     <Typography variant="body2" color="textSecondary">
                                        Txn Cancelled
                                     </Typography>
                                     <Typography variant="h6">4500</Typography>
-                                    <Typography sx={{ fontSize: '1rem', color: 'primary' }}>AUD. 1258</Typography>
+                                 </Grid>
+                                 <Grid>
+                                    <Typography sx={{ fontSize: '1rem', color: 'rgb(2, 202, 52)' }}>AUD. 1258</Typography>
                                  </Grid>
                               </CardContent>
                            </Card>
                         </Box>
                      </Grid>
-                     <Grid item xs={8} sm={3} md={2}>
+                     <Grid item xs={10} sm={5} md={3}>
                         <Box
                            sx={{
                               overflow: 'auto',
@@ -377,9 +376,7 @@ const Profile = () => {
                               sx={{
                                  width: '250px',
                                  boxShadow: '1',
-
                                  borderLeft: '3px solid rgb(1, 100, 25)',
-                                 marginRight: '16px',
                                  height: '100%',
                                  transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
                                  cursor: 'pointer',
@@ -393,17 +390,19 @@ const Profile = () => {
                                     container
                                     sx={{
                                        display: 'flex',
-                                       flexDirection: 'column',
-                                       alignItems: 'center',
-                                       justifyContent: 'center',
-                                       height: '100%'
+                                       flexDirection: 'row',
+                                       justifyContent: 'space-between',
+                                       height: '100%',
+                                       mb: 1
                                     }}
                                  >
                                     <Typography variant="body2" color="textSecondary">
                                        Compliance
                                     </Typography>
                                     <Typography variant="h6">4500</Typography>
-                                    <Typography sx={{ fontSize: '1rem', color: 'primary' }}>AUD. 1258</Typography>
+                                 </Grid>
+                                 <Grid>
+                                    <Typography sx={{ fontSize: '1rem', color: 'rgb(2, 202, 52)' }}>AUD. 1258</Typography>
                                  </Grid>
                               </CardContent>
                            </Card>
