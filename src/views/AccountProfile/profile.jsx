@@ -137,7 +137,18 @@ const Profile = () => {
                         alignItems: 'center',
                         width: '100%',
                         overflow: 'auto',
-                        whiteSpace: 'nowrap'
+                        whiteSpace: 'nowrap',
+                        '&::-webkit-scrollbar': {
+                           width: '7px', // Change width for vertical scrollbar
+                           height: '7px' // Change height for horizontal scrollbar
+                        },
+                        '&::-webkit-scrollbar-thumb': {
+                           backgroundColor: '#888', // Change color of scrollbar thumb
+                           borderRadius: '10px' // Round the corners of scrollbar thumb
+                        },
+                        '&::-webkit-scrollbar-thumb:hover': {
+                           backgroundColor: '#555' // Change color of scrollbar thumb on hover
+                        }
                      }}
                   >
                      <Grid item xs={10} sm={5} md={3}>
