@@ -154,7 +154,7 @@ const Profile = () => {
                            <Card
                               sx={{
                                  width: '250px',
-                                 boxShadow: '24',
+                                 boxShadow: '5',
                                  borderLeft: '3px solid rgb(1, 100, 25)',
                                  marginRight: '16px',
                                  height: '100%',
@@ -201,7 +201,7 @@ const Profile = () => {
                            <Card
                               sx={{
                                  width: '250px',
-                                 boxShadow: '24',
+                                 boxShadow: '5',
 
                                  borderLeft: '3px solid rgb(1, 100, 25)',
                                  marginRight: '16px',
@@ -248,7 +248,7 @@ const Profile = () => {
                            <Card
                               sx={{
                                  width: '250px',
-                                 boxShadow: '24',
+                                 boxShadow: '5',
 
                                  borderLeft: '3px solid rgb(1, 100, 25)',
                                  marginRight: '16px',
@@ -295,7 +295,7 @@ const Profile = () => {
                            <Card
                               sx={{
                                  width: '250px',
-                                 boxShadow: '24',
+                                 boxShadow: '5',
                                  borderLeft: '3px solid rgb(1, 100, 25)',
 
                                  marginRight: '16px',
@@ -341,7 +341,7 @@ const Profile = () => {
                            <Card
                               sx={{
                                  width: '250px',
-                                 boxShadow: '24',
+                                 boxShadow: '5',
 
                                  borderLeft: '3px solid rgb(1, 100, 25)',
                                  marginRight: '16px',
@@ -387,7 +387,7 @@ const Profile = () => {
                            <Card
                               sx={{
                                  width: '250px',
-                                 boxShadow: '24',
+                                 boxShadow: '5',
 
                                  borderLeft: '3px solid rgb(1, 100, 25)',
                                  marginRight: '16px',

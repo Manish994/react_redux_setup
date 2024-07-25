@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import MainCard from 'ui-component/cards/MainCard';
-import { Tabs, Tab, Divider } from '@mui/material';
+import { Tabs, Tab, Divider, Card } from '@mui/material';
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 import DescriptionTwoToneIcon from '@mui/icons-material/DescriptionTwoTone';
 import LibraryBooksTwoToneIcon from '@mui/icons-material/LibraryBooksTwoTone';
@@ -31,23 +31,25 @@ const StepperProfile = () => {
 
    return (
       <MainCard>
-         <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="simple tabs example"
-            variant="scrollable"
-            scrollButtons="auto"
-            indicatorColor="primary"
-            textColor="primary"
-         >
-            <Tab icon={<AccountCircleTwoToneIcon />} iconPosition="start" label="Profile" sx={styles} />
-            <Tab icon={<DescriptionTwoToneIcon />} iconPosition="start" label="Personal Details" sx={styles} />
-            <Tab icon={<DescriptionTwoToneIcon />} iconPosition="start" label="KYC Details" sx={styles} />
-            <Tab icon={<LibraryBooksTwoToneIcon />} iconPosition="start" label="My Account" sx={styles} />
-            <Tab icon={<LockTwoToneIcon />} iconPosition="start" label="Security" sx={styles} />
-            <Tab icon={<MailTwoToneIcon />} iconPosition="start" label="History" sx={styles} />
-         </Tabs>
-         <Divider style={{ marginBottom: '24px' }} />
+         <Card>
+            <Tabs
+               value={value}
+               onChange={handleChange}
+               aria-label="simple tabs example"
+               variant="scrollable"
+               scrollButtons="auto"
+               indicatorColor="primary"
+               textColor="primary"
+            >
+               <Tab icon={<AccountCircleTwoToneIcon />} iconPosition="start" label="Profile" sx={styles} />
+               <Tab icon={<DescriptionTwoToneIcon />} iconPosition="start" label="Personal Details" sx={styles} />
+               <Tab icon={<DescriptionTwoToneIcon />} iconPosition="start" label="KYC Details" sx={styles} />
+               <Tab icon={<LibraryBooksTwoToneIcon />} iconPosition="start" label="My Account" sx={styles} />
+               <Tab icon={<LockTwoToneIcon />} iconPosition="start" label="Security" sx={styles} />
+               <Tab icon={<MailTwoToneIcon />} iconPosition="start" label="History" sx={styles} />
+            </Tabs>
+         </Card>
+         <br></br>
          <SwipeableViews index={value} onChangeIndex={handleChangeIndex}>
             <Profile />
             <PersonalDetails />
