@@ -7,7 +7,7 @@ import { DatePicker as MuiDatePicker } from '@mui/x-date-pickers';
 
 // project imports
 import SubCard from 'ui-component/cards/SubCard';
-import ImgUpload from './imgUpload';
+import MuiImageUpload from './muiImageUpload';
 
 const KycDetails = () => {
    const customization = useSelector((state) => state.customization);
@@ -27,8 +27,8 @@ const KycDetails = () => {
                            cursor: 'pointer'
                         }}
                      >
-                        <ImgUpload />
-                        <ImgUpload />
+                        <MuiImageUpload />
+                        <MuiImageUpload />
                      </Box>
                   </SubCard>
                </Grid>
