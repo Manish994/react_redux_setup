@@ -10,7 +10,7 @@ import SwipeableViews from 'react-swipeable-views';
 
 //
 import Profile from './Profile';
-import PersonalDetails from './personalDetails';
+import PersonalDetails from 'views/AccountProfile/PersonalDetails';
 import KycDetails from './kycDetails';
 import MyAccount from './myAccount';
 import Security from './security';
