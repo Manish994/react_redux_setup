@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import MainCard from 'ui-component/cards/MainCard';
-import { Tabs, Tab, Divider, Card } from '@mui/material';
+import { Tabs, Tab, Card } from '@mui/material';
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 import DescriptionTwoToneIcon from '@mui/icons-material/DescriptionTwoTone';
 import LibraryBooksTwoToneIcon from '@mui/icons-material/LibraryBooksTwoTone';
