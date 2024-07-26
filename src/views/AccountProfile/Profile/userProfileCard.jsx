@@ -98,302 +98,300 @@ const UserProfileCard = () => {
    /* ╔════════════════════════════════════════════════════════╗
       ║                 RENDER TRANSACTION CARDS               ║
       ╚════════════════════════════════════════════════════════╝ */
-   const RenderTransactionCards = () => {
-      return (
-         <Grid item xs={12} md={12}>
-            <Box
-               sx={{
-                  display: 'flex',
-                  flexDirection: isMobile ? 'row' : 'row', // Change flex direction based on view
-                  alignItems: 'center',
-                  width: '100%',
-                  overflow: 'auto',
-                  whiteSpace: 'nowrap',
-                  '&::-webkit-scrollbar': {
-                     width: '7px', // Change width for vertical scrollbar
-                     height: '7px' // Change height for horizontal scrollbar
-                  },
-                  '&::-webkit-scrollbar-thumb': {
-                     backgroundColor: '#888', // Change color of scrollbar thumb
-                     borderRadius: '10px' // Round the corners of scrollbar thumb
-                  },
-                  '&::-webkit-scrollbar-thumb:hover': {
-                     backgroundColor: '#555' // Change color of scrollbar thumb on hover
-                  }
-               }}
-            >
-               <Grid item xs={10} sm={5} md={3}>
-                  <Box
+   const RenderTransactionCards = () => (
+      <Grid item xs={12} md={12}>
+         <Box
+            sx={{
+               display: 'flex',
+               flexDirection: isMobile ? 'row' : 'row', // Change flex direction based on view
+               alignItems: 'center',
+               width: '100%',
+               overflow: 'auto',
+               whiteSpace: 'nowrap',
+               '&::-webkit-scrollbar': {
+                  width: '7px', // Change width for vertical scrollbar
+                  height: '7px' // Change height for horizontal scrollbar
+               },
+               '&::-webkit-scrollbar-thumb': {
+                  backgroundColor: '#888', // Change color of scrollbar thumb
+                  borderRadius: '10px' // Round the corners of scrollbar thumb
+               },
+               '&::-webkit-scrollbar-thumb:hover': {
+                  backgroundColor: '#555' // Change color of scrollbar thumb on hover
+               }
+            }}
+         >
+            <Grid item xs={10} sm={5} md={3}>
+               <Box
+                  sx={{
+                     overflow: 'auto',
+                     padding: '10px',
+                     display: 'flex'
+                  }}
+               >
+                  <Card
                      sx={{
-                        overflow: 'auto',
-                        padding: '10px',
-                        display: 'flex'
+                        width: '250px',
+                        boxShadow: '1',
+                        borderLeft: '3px solid rgb(1, 100, 25)',
+                        height: '100%',
+                        transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
+                        cursor: 'pointer',
+                        '&:hover': {
+                           transform: 'scale(1.05)'
+                        }
                      }}
                   >
-                     <Card
-                        sx={{
-                           width: '250px',
-                           boxShadow: '1',
-                           borderLeft: '3px solid rgb(1, 100, 25)',
-                           height: '100%',
-                           transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
-                           cursor: 'pointer',
-                           '&:hover': {
-                              transform: 'scale(1.05)'
-                           }
-                        }}
-                     >
-                        <CardContent>
-                           <Grid
-                              container
-                              sx={{
-                                 display: 'flex',
-                                 flexDirection: 'row',
-                                 justifyContent: 'space-between',
-                                 height: '100%',
-                                 mb: 1
-                              }}
-                           >
-                              <Typography variant="body2" color="textSecondary">
-                                 Receiver
-                              </Typography>
-                              <Typography variant="h6">4500</Typography>
-                           </Grid>
-                           <Grid>
-                              <br></br>
-                              {/* <img alt="Endowment Saving" src={propertyAndHomeImage} width={50} height={50} className="" /> */}
-                           </Grid>
-                        </CardContent>
-                     </Card>
-                  </Box>
-               </Grid>
-               <Grid item xs={10} sm={5} md={3}>
-                  <Box
+                     <CardContent>
+                        <Grid
+                           container
+                           sx={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              justifyContent: 'space-between',
+                              height: '100%',
+                              mb: 1
+                           }}
+                        >
+                           <Typography variant="body2" color="textSecondary">
+                              Receiver
+                           </Typography>
+                           <Typography variant="h6">4500</Typography>
+                        </Grid>
+                        <Grid>
+                           <Typography variant="h6">.</Typography>
+                           {/* <img alt="Endowment Saving" src={propertyAndHomeImage} width={50} height={50} className="" /> */}
+                        </Grid>
+                     </CardContent>
+                  </Card>
+               </Box>
+            </Grid>
+            <Grid item xs={10} sm={5} md={3}>
+               <Box
+                  sx={{
+                     overflow: 'auto',
+                     padding: '10px',
+                     display: 'flex'
+                  }}
+               >
+                  <Card
                      sx={{
-                        overflow: 'auto',
-                        padding: '10px',
-                        display: 'flex'
+                        width: '250px',
+                        boxShadow: '1',
+                        borderLeft: '3px solid rgb(1, 100, 25)',
+                        height: '100%',
+                        transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
+                        cursor: 'pointer',
+                        '&:hover': {
+                           transform: 'scale(1.05)'
+                        }
                      }}
                   >
-                     <Card
-                        sx={{
-                           width: '250px',
-                           boxShadow: '1',
-                           borderLeft: '3px solid rgb(1, 100, 25)',
-                           height: '100%',
-                           transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
-                           cursor: 'pointer',
-                           '&:hover': {
-                              transform: 'scale(1.05)'
-                           }
-                        }}
-                     >
-                        <CardContent>
-                           <Grid
-                              container
-                              sx={{
-                                 display: 'flex',
-                                 flexDirection: 'row',
-                                 justifyContent: 'space-between',
-                                 height: '100%',
-                                 mb: 1
-                              }}
-                           >
-                              <Typography variant="body2" color="textSecondary">
-                                 Txn Initiated
-                              </Typography>
-                              <Typography variant="h6">4500</Typography>
-                           </Grid>
-                           <Grid>
-                              <Typography sx={{ fontSize: '1rem', color: 'rgb(2, 202, 52)' }}>AUD. 1258</Typography>
-                              {/* <img alt="Endowment Saving" src={propertyAndHomeImage} width={50} height={50} className="" /> */}
-                           </Grid>
-                        </CardContent>
-                     </Card>
-                  </Box>
-               </Grid>
-               <Grid item xs={10} sm={5} md={3}>
-                  <Box
+                     <CardContent>
+                        <Grid
+                           container
+                           sx={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              justifyContent: 'space-between',
+                              height: '100%',
+                              mb: 1
+                           }}
+                        >
+                           <Typography variant="body2" color="textSecondary">
+                              Txn Initiated
+                           </Typography>
+                           <Typography variant="h6">4500</Typography>
+                        </Grid>
+                        <Grid>
+                           <Typography sx={{ fontSize: '1rem', color: 'rgb(2, 202, 52)' }}>AUD. 1258</Typography>
+                           {/* <img alt="Endowment Saving" src={propertyAndHomeImage} width={50} height={50} className="" /> */}
+                        </Grid>
+                     </CardContent>
+                  </Card>
+               </Box>
+            </Grid>
+            <Grid item xs={10} sm={5} md={3}>
+               <Box
+                  sx={{
+                     overflow: 'auto',
+                     padding: '10px',
+                     display: 'flex'
+                  }}
+               >
+                  <Card
                      sx={{
-                        overflow: 'auto',
-                        padding: '10px',
-                        display: 'flex'
+                        width: '250px',
+                        boxShadow: '1',
+                        borderLeft: '3px solid rgb(1, 100, 25)',
+                        height: '100%',
+                        transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
+                        cursor: 'pointer',
+                        '&:hover': {
+                           transform: 'scale(1.05)'
+                        }
                      }}
                   >
-                     <Card
-                        sx={{
-                           width: '250px',
-                           boxShadow: '1',
-                           borderLeft: '3px solid rgb(1, 100, 25)',
-                           height: '100%',
-                           transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
-                           cursor: 'pointer',
-                           '&:hover': {
-                              transform: 'scale(1.05)'
-                           }
-                        }}
-                     >
-                        <CardContent>
-                           <Grid
-                              container
-                              sx={{
-                                 display: 'flex',
-                                 flexDirection: 'row',
-                                 justifyContent: 'space-between',
-                                 height: '100%',
-                                 mb: 1
-                              }}
-                           >
-                              <Typography variant="body2" color="textSecondary">
-                                 Txn Paid
-                              </Typography>
-                              <Typography variant="h6">4500</Typography>
-                           </Grid>
-                           <Grid>
-                              <Typography sx={{ fontSize: '1rem', color: 'rgb(2, 202, 52)' }}>AUD. 1258</Typography>
-                              {/* <img alt="Endowment Saving" src={propertyAndHomeImage} width={50} height={50} className="" /> */}
-                           </Grid>
-                        </CardContent>
-                     </Card>
-                  </Box>
-               </Grid>
-               <Grid item xs={10} sm={5} md={3}>
-                  <Box
+                     <CardContent>
+                        <Grid
+                           container
+                           sx={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              justifyContent: 'space-between',
+                              height: '100%',
+                              mb: 1
+                           }}
+                        >
+                           <Typography variant="body2" color="textSecondary">
+                              Txn Paid
+                           </Typography>
+                           <Typography variant="h6">4500</Typography>
+                        </Grid>
+                        <Grid>
+                           <Typography sx={{ fontSize: '1rem', color: 'rgb(2, 202, 52)' }}>AUD. 1258</Typography>
+                           {/* <img alt="Endowment Saving" src={propertyAndHomeImage} width={50} height={50} className="" /> */}
+                        </Grid>
+                     </CardContent>
+                  </Card>
+               </Box>
+            </Grid>
+            <Grid item xs={10} sm={5} md={3}>
+               <Box
+                  sx={{
+                     overflow: 'auto',
+                     padding: '10px',
+                     display: 'flex'
+                  }}
+               >
+                  <Card
                      sx={{
-                        overflow: 'auto',
-                        padding: '10px',
-                        display: 'flex'
+                        width: '250px',
+                        boxShadow: '1',
+                        borderLeft: '3px solid rgb(1, 100, 25)',
+                        height: '100%',
+                        transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
+                        cursor: 'pointer',
+                        '&:hover': {
+                           transform: 'scale(1.05)'
+                        }
                      }}
                   >
-                     <Card
-                        sx={{
-                           width: '250px',
-                           boxShadow: '1',
-                           borderLeft: '3px solid rgb(1, 100, 25)',
-                           height: '100%',
-                           transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
-                           cursor: 'pointer',
-                           '&:hover': {
-                              transform: 'scale(1.05)'
-                           }
-                        }}
-                     >
-                        <CardContent>
-                           <Grid
-                              container
-                              sx={{
-                                 display: 'flex',
-                                 flexDirection: 'row',
-                                 justifyContent: 'space-between',
-                                 height: '100%',
-                                 mb: 1
-                              }}
-                           >
-                              <Typography variant="body2" color="textSecondary">
-                                 Txn Failed
-                              </Typography>
-                              <Typography variant="h6">4500</Typography>
-                           </Grid>
-                           <Grid>
-                              <Typography sx={{ fontSize: '1rem', color: 'rgb(2, 202, 52)' }}>AUD. 1258</Typography>
-                           </Grid>
-                        </CardContent>
-                     </Card>
-                  </Box>
-               </Grid>
-               <Grid item xs={10} sm={5} md={3}>
-                  <Box
+                     <CardContent>
+                        <Grid
+                           container
+                           sx={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              justifyContent: 'space-between',
+                              height: '100%',
+                              mb: 1
+                           }}
+                        >
+                           <Typography variant="body2" color="textSecondary">
+                              Txn Failed
+                           </Typography>
+                           <Typography variant="h6">4500</Typography>
+                        </Grid>
+                        <Grid>
+                           <Typography sx={{ fontSize: '1rem', color: 'rgb(2, 202, 52)' }}>AUD. 1258</Typography>
+                        </Grid>
+                     </CardContent>
+                  </Card>
+               </Box>
+            </Grid>
+            <Grid item xs={10} sm={5} md={3}>
+               <Box
+                  sx={{
+                     overflow: 'auto',
+                     padding: '10px',
+                     display: 'flex',
+                     mb: 1
+                  }}
+               >
+                  <Card
                      sx={{
-                        overflow: 'auto',
-                        padding: '10px',
-                        display: 'flex',
-                        mb: 1
+                        width: '250px',
+                        boxShadow: '1',
+                        borderLeft: '3px solid rgb(1, 100, 25)',
+                        height: '100%',
+                        transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
+                        cursor: 'pointer',
+                        '&:hover': {
+                           transform: 'scale(1.05)'
+                        }
                      }}
                   >
-                     <Card
-                        sx={{
-                           width: '250px',
-                           boxShadow: '1',
-                           borderLeft: '3px solid rgb(1, 100, 25)',
-                           height: '100%',
-                           transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
-                           cursor: 'pointer',
-                           '&:hover': {
-                              transform: 'scale(1.05)'
-                           }
-                        }}
-                     >
-                        <CardContent>
-                           <Grid
-                              container
-                              sx={{
-                                 display: 'flex',
-                                 flexDirection: 'row',
-                                 justifyContent: 'space-between',
-                                 height: '100%',
-                                 mb: 1
-                              }}
-                           >
-                              <Typography variant="body2" color="textSecondary">
-                                 Txn Cancelled
-                              </Typography>
-                              <Typography variant="h6">4500</Typography>
-                           </Grid>
-                           <Grid>
-                              <Typography sx={{ fontSize: '1rem', color: 'rgb(2, 202, 52)' }}>AUD. 1258</Typography>
-                           </Grid>
-                        </CardContent>
-                     </Card>
-                  </Box>
-               </Grid>
-               <Grid item xs={10} sm={5} md={3}>
-                  <Box
+                     <CardContent>
+                        <Grid
+                           container
+                           sx={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              justifyContent: 'space-between',
+                              height: '100%',
+                              mb: 1
+                           }}
+                        >
+                           <Typography variant="body2" color="textSecondary">
+                              Txn Cancelled
+                           </Typography>
+                           <Typography variant="h6">4500</Typography>
+                        </Grid>
+                        <Grid>
+                           <Typography sx={{ fontSize: '1rem', color: 'rgb(2, 202, 52)' }}>AUD. 1258</Typography>
+                        </Grid>
+                     </CardContent>
+                  </Card>
+               </Box>
+            </Grid>
+            <Grid item xs={10} sm={5} md={3}>
+               <Box
+                  sx={{
+                     overflow: 'auto',
+                     padding: '10px',
+                     display: 'flex'
+                  }}
+               >
+                  <Card
                      sx={{
-                        overflow: 'auto',
-                        padding: '10px',
-                        display: 'flex'
+                        width: '250px',
+                        boxShadow: '1',
+                        borderLeft: '3px solid rgb(1, 100, 25)',
+                        height: '100%',
+                        transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
+                        cursor: 'pointer',
+                        '&:hover': {
+                           transform: 'scale(1.05)'
+                        }
                      }}
                   >
-                     <Card
-                        sx={{
-                           width: '250px',
-                           boxShadow: '1',
-                           borderLeft: '3px solid rgb(1, 100, 25)',
-                           height: '100%',
-                           transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
-                           cursor: 'pointer',
-                           '&:hover': {
-                              transform: 'scale(1.05)'
-                           }
-                        }}
-                     >
-                        <CardContent>
-                           <Grid
-                              container
-                              sx={{
-                                 display: 'flex',
-                                 flexDirection: 'row',
-                                 justifyContent: 'space-between',
-                                 height: '100%',
-                                 mb: 1
-                              }}
-                           >
-                              <Typography variant="body2" color="textSecondary">
-                                 Compliance
-                              </Typography>
-                              <Typography variant="h6">4500</Typography>
-                           </Grid>
-                           <Grid>
-                              <Typography sx={{ fontSize: '1rem', color: 'rgb(2, 202, 52)' }}>AUD. 1258</Typography>
-                           </Grid>
-                        </CardContent>
-                     </Card>
-                  </Box>
-               </Grid>
-            </Box>
-         </Grid>
-      );
-   };
+                     <CardContent>
+                        <Grid
+                           container
+                           sx={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              justifyContent: 'space-between',
+                              height: '100%',
+                              mb: 1
+                           }}
+                        >
+                           <Typography variant="body2" color="textSecondary">
+                              Compliance
+                           </Typography>
+                           <Typography variant="h6">4500</Typography>
+                        </Grid>
+                        <Grid>
+                           <Typography sx={{ fontSize: '1rem', color: 'rgb(2, 202, 52)' }}>AUD. 1258</Typography>
+                        </Grid>
+                     </CardContent>
+                  </Card>
+               </Box>
+            </Grid>
+         </Box>
+      </Grid>
+   );
 
    return (
       <React.Fragment>
