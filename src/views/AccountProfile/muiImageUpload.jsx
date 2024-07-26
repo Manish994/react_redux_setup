@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Box, Button, Grid, InputLabel, CardContent, Card } from '@mui/material';
+import { Box, Button, Grid, InputLabel, CardContent, Card, Typography } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 
 const MuiImageUpload = () => {
@@ -62,6 +62,7 @@ const MuiImageUpload = () => {
                               }}
                            >
                               <AddIcon sx={{ fontSize: 30, color: 'white' }} />
+                              <Typography color="white">Front Image</Typography>
                            </Box>
                         </InputLabel>
                         <input id="file-upload" type="file" style={{ display: 'none' }} />
