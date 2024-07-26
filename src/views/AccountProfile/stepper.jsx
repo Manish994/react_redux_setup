@@ -11,7 +11,7 @@ import SwipeableViews from 'react-swipeable-views';
 //
 import Profile from './Profile';
 import PersonalDetails from 'views/AccountProfile/PersonalDetails';
-import KycDetails from './kycDetails';
+import KycDetails from 'views/AccountProfile/KYCDetails';
 import MyAccount from './myAccount';
 import Security from './security';
 import AdminHistory from './settings';
