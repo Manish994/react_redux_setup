@@ -2,6 +2,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Box, Grid, InputLabel, CardContent, Card, Typography } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const MuiImageUpload = () => {
    let imageFile = '';
@@ -11,11 +13,15 @@ const MuiImageUpload = () => {
 
    const UploadImageShow = () => (
       <Box>
-         <img
-            src={imageFile ? `data:image/jpeg;base64,${imageFile}` : `data:image/jpeg;base64,${imagePreview}`}
-            alt="User Profile"
-            style={{ width: '100%', cursor: 'pointer' }}
-         />
+         <PhotoProvider>
+            <PhotoView src={`data:image/jpeg;base64,${imagePreview}`}>
+               <img
+                  src={imageFile ? `data:image/jpeg;base64,${imageFile}` : `data:image/jpeg;base64,${imagePreview}`}
+                  alt="User Profile"
+                  style={{ width: '100%', cursor: 'pointer' }}
+               />
+            </PhotoView>
+         </PhotoProvider>
       </Box>
    );
 
