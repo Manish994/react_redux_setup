@@ -15,8 +15,8 @@ const rootReducer = combineReducers({
 const persistConfig = {
    key: 'root', // Key for the persistor in storage
    version: 1, // Version of your persisted state
-   storage: storageSession, // Storage engine to use (e.g., localStorage)
-   blacklist: ['customization'] // Array of state keys to blacklist from persistence
+   storage: storageSession // Storage engine to use (e.g., localStorage)
+   // blacklist: ['customization'] // Array of state keys to blacklist from persistence
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -27,8 +27,8 @@ export const store = configureStore({
    middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({
          serializableCheck: {
-            ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-            ignoredPaths: ['customization']
+            ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
+            // ignoredPaths: ['customization']
          }
       })
 });
