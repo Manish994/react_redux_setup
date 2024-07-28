@@ -16,6 +16,10 @@ import NavigationScroll from 'layout/NavigationScroll';
 // Redux-related imports
 import { selectCustomization } from '@slice/customizationSlice';
 
+//toast container
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // ==============================|| APP ||============================== //
 
 const App = () => {
@@ -27,6 +31,18 @@ const App = () => {
             <CssBaseline />
             <NavigationScroll>
                <RouterProvider router={router} />
+               <ToastContainer
+                  position="bottom-right"
+                  autoClose={1000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                  theme="colored"
+               />
             </NavigationScroll>
          </ThemeProvider>
       </StyledEngineProvider>
