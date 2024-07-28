@@ -19,8 +19,8 @@ const KYCImageUpload = () => {
                   cursor: 'pointer'
                }}
             >
-               <ImageUploader />
-               <ImageUploader />
+               <ImageUploader labelName="Front Image" />
+               <ImageUploader labelName="Back Image" />
             </Box>
          </SubCard>
       </Grid>
