@@ -14,7 +14,7 @@ const KYCImageCard = () => {
    const itemData = [
       {
          img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-         title: 'Breakfast',
+         title: 'Front Image',
          author: '@bkristastucchio',
          rows: 2,
          cols: 2,
@@ -22,7 +22,7 @@ const KYCImageCard = () => {
       },
       {
          img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-         title: 'Burger',
+         title: 'Back Image',
          author: '@rollelflex_graphy726'
       }
    ];
