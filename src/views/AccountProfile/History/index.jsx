@@ -4,7 +4,7 @@ import { Box, List, ListItem, ListItemText, Typography } from '@mui/material';
 // project imports
 import SubCard from 'ui-component/cards/SubCard';
 
-const adminHistory = [
+const history = [
    {
       action: 'New customer added',
       description: 'Admin added a new customer named John Doe',
@@ -23,19 +23,19 @@ const adminHistory = [
    // Add more actions as needed
 ];
 
-const AdminHistory = () => {
+const ProfileHistory = () => {
    return (
       <SubCard title="2024-07-21 10:00 AM" sx={{ marginBottom: '24px' }}>
          <Box>
             <List>
-               {adminHistory.map((history, index) => (
+               {history.map((item, index) => (
                   <ListItem key={index} divider>
                      <ListItemText
-                        primary={history.action}
+                        primary={item.action}
                         secondary={
                            <>
                               <Typography component="span" variant="body2" color="textPrimary">
-                                 {history.description}
+                                 {item.description}
                               </Typography>
                               <br />
                            </>
@@ -49,4 +49,4 @@ const AdminHistory = () => {
    );
 };
 
-export default AdminHistory;
+export default ProfileHistory;

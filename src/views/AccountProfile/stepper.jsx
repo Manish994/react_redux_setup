@@ -13,8 +13,8 @@ import Profile from './Profile';
 import PersonalDetails from 'views/AccountProfile/PersonalDetails';
 import KycDetails from 'views/AccountProfile/KYCDetails';
 import MyAccount from './MYAccount';
-import Security from './security';
-import AdminHistory from './settings';
+import Security from './Security';
+import ProfileHistory from './History';
 
 const StepperProfile = () => {
    const [value, setValue] = useState(0);
@@ -56,7 +56,7 @@ const StepperProfile = () => {
             <KycDetails />
             <MyAccount />
             <Security />
-            <AdminHistory />
+            <ProfileHistory />
          </SwipeableViews>
       </MainCard>
    );

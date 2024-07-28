@@ -11,8 +11,8 @@ const Security = () => {
    return (
       <Grid container spacing={customization.gridSpacing}>
          <Grid container item xs={12} md={12}>
-            <AccountSecurity />
             <ChangePassword />
+            <AccountSecurity />
          </Grid>
       </Grid>
    );
