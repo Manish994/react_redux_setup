@@ -65,6 +65,7 @@ module.exports = {
             ignoreRestSiblings: false
          }
       ],
+      'no-debugger': 'off',
       'prettier/prettier': [
          'error',
          {
