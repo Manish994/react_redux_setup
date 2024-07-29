@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import jsconfigPaths from 'vite-jsconfig-paths';
 import path from 'path';
-import ViteEslint from '@nabla/vite-plugin-eslint';
+import eslintPlugin from 'vite-plugin-eslint';
 import { visualizer } from 'rollup-plugin-visualizer';
 import timeReporter from 'vite-plugin-time-reporter';
 import Inspect from 'vite-plugin-inspect';
@@ -36,7 +36,13 @@ export default defineConfig(({ command }) => {
       plugins: [
          react(),
          jsconfigPaths(),
-         ViteEslint(),
+         eslintPlugin({
+            cache: false,
+            include: ['src/**/*.js', 'src/**/*.jsx', 'src/**/*.ts', 'src/**/*.tsx'],
+            exclude: ['node_modules'],
+            emitWarning: true,
+            emitError: true
+         }),
          timeReporter(),
          Inspect(),
          VitePWA({
@@ -84,7 +90,7 @@ export default defineConfig(({ command }) => {
             strictPort: true,
             hmr: {
                clientPort: 3000, // Ensure the client connects to the correct port
-               overlay: false // Disable the server error overlay if desired
+               overlay: true // Disable the server error overlay if desired
             }
          }
       });
